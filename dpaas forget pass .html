@@ -1,0 +1,150 @@
+<section id="reset-password-form" class="reset-password-section">
+  <div class="container">
+    <a href="#" class="back-link">
+      <img src="/page/65f2840c-6e3c-4bb2-9935-a71c142c815d/images/10_1858.svg" alt="Back" class="back-icon">
+    </a>
+    <form class="reset-form">
+      <div class="form-group">
+        <label for="new-password" class="form-label">New Passward :</label>
+        <input type="password" id="new-password" name="new-password" class="form-input">
+      </div>
+      <div class="form-group">
+        <label for="confirm-password" class="form-label">Confirm password :</label>
+        <input type="password" id="confirm-password" name="confirm-password" class="form-input">
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="submit-button">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+<style>
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: 83D8EB;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* CSS from section:form */
+.reset-password-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  background-color:83D8EB;
+  width: 100%;
+  max-width: 412px;
+  min-height: 917px;
+  padding: 79px 8px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 139px;
+  width: 42px;
+  height: 42px;
+}
+.back-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.reset-form {
+  padding-left: 21px; /* 29px total indent - 8px container padding */
+  padding-right: 21px; /* Symmetrical padding */
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group:first-of-type {
+  margin-bottom: 13px;
+}
+.form-label {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+.form-group:first-of-type .form-label {
+  margin-bottom: 24px;
+}
+.form-group:nth-of-type(2) .form-label {
+  margin-bottom: 20px;
+}
+.form-input {
+  background-color: #fffafa;
+  border-radius: 17px;
+  width: 100%;
+  max-width: 364px;
+  padding: 0 15px;
+  font-size: 1rem;
+  border-style: solid;
+  border-width: 1px;
+}
+#new-password {
+  height: 54px;
+  border-color: #000000;
+}
+#confirm-password {
+  height: 56px;
+  border-color: #0f0e0e;
+}
+.form-actions {
+  margin-top: 53px;
+  display: flex;
+  justify-content: flex-end;
+}
+.submit-button {
+  width: 150px;
+  height: 56px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 17px;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 412px) {
+  body {
+    align-items: stretch;
+  }
+  .container {
+    padding-top: 40px;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+  .back-link {
+    margin-bottom: 80px;
+  }
+  .form-label {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  .submit-button {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+</style>

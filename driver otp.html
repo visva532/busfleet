@@ -1,127 +1,156 @@
-<section id="otp-verification">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verify OTP | BusFleet</title>
+  <link rel="stylesheet" href="otp-style.css"/>
+</head>
+<body>
+  <section class="otp-section">
     <div class="otp-container">
-      <h1 class="otp-title">Enter OTP</h1>
+      <h1>Verify OTP</h1>
+      <p>Please enter the 6-digit OTP sent to your registered email.</p>
+
       <form class="otp-form">
-        <div class="otp-input-fields">
-          <input type="text" class="otp-input" maxlength="1" aria-label="first digit">
-          <input type="text" class="otp-input" maxlength="1" aria-label="second digit">
-          <input type="text" class="otp-input" maxlength="1" aria-label="third digit">
-          <input type="text" class="otp-input" maxlength="1" aria-label="fourth digit">
+        <div class="otp-inputs">
+          <input type="text" maxlength="1" required />
+          <input type="text" maxlength="1" required />
+          <input type="text" maxlength="1" required />
+          <input type="text" maxlength="1" required />
+          <input type="text" maxlength="1" required />
+          <input type="text" maxlength="1" required />
         </div>
-        <button type="submit" class="submit-button">Enter</button>
+
+        <button type="submit">Verify & Continue</button>
       </form>
+
+      <div class="resend-section">
+        <p>Didn't receive OTP? <a href="#">Resend</a></p>
+        <a href="forgot-password.html" class="back-link">← Back to Email</a>
+      </div>
     </div>
   </section>
-  <style>
-    body {
+</body>
+</html>
+<style>
+    :root {
+  --primary-color: #005a9c;
+  --background-color: #f5f7fa;
+  --input-bg: #ffffff;
+  --text-color: #333;
+  --border-color: #ccc;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #fff01f;
-  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  color: var(--text-color);
 }
 
-/* CSS from section:otp */
+.otp-section {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
 .otp-container {
-    max-width: 412px;
-    width: 100%;
-    box-sizing: border-box;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.otp-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.otp-inputs input {
+  width: 40px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00457c;
+}
+
+.resend-section {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.resend-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.back-link {
+  display: block;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .otp-container {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
-  .otp-title {
-    font-family: 'Poppins', sans-serif; /* Based on textStyle_5 */
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 1.4;
-    color: #000000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 0;
-    margin-top: 81px; /* Adjusted from 101px for better visual balance */
-    margin-bottom: 41px;
-    text-align: center;
+  .otp-inputs input {
+    width: 36px;
+    height: 44px;
+    font-size: 18px;
   }
 
-  .otp-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  h1 {
+    font-size: 20px;
   }
+}
 
-  .otp-input-fields {
-    display: flex;
-    justify-content: center;
-    gap: 46px; /* Based on spacing between inputs */
-    margin-bottom: 138px;
-  }
-
-  .otp-input {
-    width: 52px;
-    height: 52px;
-    background-color: #d9d9d9;
-    border-radius: 15px;
-    border: none;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-  }
-
-  .otp-input:focus {
-    outline: 2px solid #aac3bb;
-    box-shadow: 0 0 5px rgba(170, 195, 187, 0.7);
-  }
-
-  .submit-button {
-    width: 150px;
-    height: 70px;
-    background-color: #aac3bb;
-    border-radius: 10px;
-    border: none;
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 60px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 412px) {
-    .otp-title {
-      font-size: 10vw;
-      margin-top: 20vh;
-    }
-    .otp-input-fields {
-      gap: 20px;
-      justify-content: space-evenly;
-      width: 100%;
-    }
-    .otp-input {
-      width: 15vw;
-      height: 15vw;
-      max-width: 52px;
-      max-height: 52px;
-      font-size: 6vw;
-    }
-    .submit-button {
-      width: 40vw;
-      height: 18vw;
-      max-width: 150px;
-      max-height: 70px;
-      font-size: 8vw;
-    }
-  }
-  </style>
+</style>

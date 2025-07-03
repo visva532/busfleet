@@ -103,7 +103,7 @@
     .fuel-fill {
       height: 100%;
       background-color: #28a745;
-      width: 75%; /* current fuel level */
+      width: 72%; /* change this based on fuel level */
       color: white;
       text-align: center;
       font-size: 0.85rem;
@@ -138,6 +138,7 @@
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <header>
     <div class="logo">BusFleetPro</div>
@@ -145,6 +146,7 @@
       <a href="#">Home</a>
       <a href="#">My Trips</a>
       <a href="#">Schedule</a>
+      <a href="#">Settings</a>
       <a href="#">Logout</a>
     </nav>
   </header>
@@ -152,7 +154,7 @@
   <!-- Main Content -->
   <div class="main-content">
 
-    <!-- Welcome Card -->
+    <!-- Welcome -->
     <div class="card">
       <h2>Welcome, Driver John!</h2>
       <p>You are logged in to the Bus Fleet Management System. Use the options below to manage your schedule and trips.</p>
@@ -167,42 +169,42 @@
 
     <!-- Fuel Info -->
     <div class="card">
-      <h2>Current Bus Fuel Info</h2>
+      <h2>Current Bus Fuel Status</h2>
       <p><strong>Bus Number:</strong> TN07GH1122</p>
-      <p><strong>Available Fuel:</strong> 75%</p>
+      <p><strong>Fuel Available:</strong> 72%</p>
       <div class="fuel-bar">
-        <div class="fuel-fill">75%</div>
+        <div class="fuel-fill">72%</div>
       </div>
     </div>
 
     <!-- Shift & Route Info -->
     <div class="card">
-      <h2>Shift & Route Details</h2>
+      <h2>Driving Shifts & Routes</h2>
 
-      <!-- Today -->
+      <!-- Today's Shift -->
       <div class="info-section">
-        <h3>Today's Shift (July 3, 2025)</h3>
+        <h3>Today (July 3, 2025)</h3>
         <p><strong>Shift Time:</strong> 6:00 AM – 12:00 PM</p>
-        <p><strong>Route:</strong> Chennai to Trichy</p>
+        <p><strong>Route:</strong> Chennai → Trichy</p>
         <p><strong>Stops:</strong></p>
         <ul>
           <li>Chennai Central</li>
-          <li>Kanchipuram</li>
           <li>Villupuram</li>
-          <li>Trichy Bus Stand</li>
+          <li>Perambalur</li>
+          <li>Trichy Main Bus Stand</li>
         </ul>
       </div>
 
-      <!-- Tomorrow -->
+      <!-- Tomorrow's Shift -->
       <div class="info-section">
-        <h3>Tomorrow's Shift (July 4, 2025)</h3>
-        <p><strong>Shift Time:</strong> 3:00 PM – 9:00 PM</p>
-        <p><strong>Route:</strong> Trichy to Salem</p>
+        <h3>Tomorrow (July 4, 2025)</h3>
+        <p><strong>Shift Time:</strong> 2:00 PM – 8:00 PM</p>
+        <p><strong>Route:</strong> Trichy → Salem</p>
         <p><strong>Stops:</strong></p>
         <ul>
-          <li>Trichy Bus Stand</li>
+          <li>Trichy</li>
           <li>Namakkal</li>
-          <li>Salem New Bus Stand</li>
+          <li>Salem Old Bus Stand</li>
         </ul>
       </div>
     </div>

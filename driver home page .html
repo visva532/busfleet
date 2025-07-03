@@ -82,6 +82,41 @@
       background-color: #003f7d;
     }
 
+    .fuel-status {
+      margin-top: 30px;
+      background-color: #f0f8ff;
+      border-left: 6px solid #0055a5;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .fuel-status h3 {
+      color: #0055a5;
+      margin-bottom: 10px;
+    }
+
+    .fuel-status p {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .fuel-bar {
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 20px;
+      margin-top: 5px;
+    }
+
+    .fuel-fill {
+      height: 100%;
+      background-color: #28a745;
+      width: 68%; /* Simulate current fuel percentage */
+      text-align: center;
+      color: white;
+      font-size: 0.8rem;
+    }
+
     footer {
       background-color: #003366;
       color: white;
@@ -129,9 +164,22 @@
         <a href="#">Trip History</a>
         <a href="#">Profile Settings</a>
       </div>
+
+      <!-- Fuel Status Section -->
+      <div class="fuel-status">
+        <h3>Current Bus Fuel Level</h3>
+        <p><strong>Bus Number:</strong> TN07GH1122</p>
+        <p><strong>Fuel Available:</strong> 68%</p>
+        <div class="fuel-bar">
+          <div class="fuel-fill">68%</div>
+        </div>
+      </div>
     </div>
   </div>
 
- 
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 BusFleetPro. All rights reserved.
+  </footer>
 </body>
 </html>

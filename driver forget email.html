@@ -1,138 +1,101 @@
-<section id="registration-form">
-  <main class="form-container">
-    <a href="#" class="back-link">
-      <img src="/page/91083a5f-1d51-410e-bbdc-1d57daba5a21/images/10_458.svg" alt="Back">
+<section id="forgot-password-form">
+  <main class="forgot-password-container">
+    <a href="#" class="back-button">
+      <img src="/page/f7f4c9b8-1fcb-4968-83d9-25e9c72d1cad/images/10_1907.svg" alt="Back Arrow">
     </a>
-    <form class="registration-form">
-      <div class="form-group">
-        <label for="name">Name :</label>
-        <input type="text" id="name" name="name">
-      </div>
-      <div class="form-group">
-        <label for="language">Language :</label>
-        <input type="text" id="language" name="language">
-      </div>
-      <div class="form-group">
-        <label for="gender">Gender :</label>
-        <input type="text" id="gender" name="gender">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone no :</label>
-        <input type="tel" id="phone" name="phone">
-      </div>
-      <div class="form-group">
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email">
-      </div>
-      <div class="form-group">
-        <label for="password">Passward :</label>
-        <input type="password" id="password" name="password">
-      </div>
-      <button type="submit" class="submit-btn">Get OTP</button>
+    <form class="form-content">
+      <label for="email" class="email-label">Enter the email</label>
+      <input type="email" id="email" name="email" class="email-input">
+      <button type="submit" class="submit-button">Get OTP</button>
     </form>
   </main>
 </section>
 <style>
-    * {
+    body {
+  margin: 0;
+  background-color: 83D8EB;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
   box-sizing: border-box;
 }
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: 83D8EB;
-}
 
-/* CSS from section:registration-form */
-.form-container {
-    max-width: 412px;
-    margin: 0 auto;
-    padding: 68px 22px 126px;
+/* CSS from section:form */
+.forgot-password-container {
     display: flex;
     flex-direction: column;
+    max-width: 412px;
     min-height: 100vh;
+    margin: 0 auto;
+    background-color: 83D8EB;
+    padding: 79px 12px 50px; /* Top: 4094-4015=79, Left: 3424-3412=12 */
   }
 
-  .back-link {
-    display: inline-block;
+  .back-button {
+    align-self: flex-start;
+    margin-left: -4px; /* Aligning with visual spec: 8px from edge, container padding is 12px */
+    margin-bottom: 164px; /* 4300 - (4094 + 42) */
+  }
+
+  .back-button img {
     width: 42px;
     height: 42px;
-    margin-bottom: 33px; /* Based on y-distance between arrow top and first label top (6301 - 6268) */
-  }
-
-  .back-link img {
-    width: 100%;
-    height: 100%;
     display: block;
   }
 
-  .registration-form {
+  .form-content {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
 
-  .form-group {
-    margin-bottom: 45px; /* Average vertical gap between form groups */
-  }
-  
-  .form-group:last-of-type {
-      margin-bottom: 0;
-  }
-
-  .form-group label {
-    display: block;
+  .email-label {
     color: #000000;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 54px;
-    margin-bottom: 2px; /* Small gap between label and input */
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px; /* 4369 - (4300 + 45) */
+    align-self: flex-start;
   }
 
-  .form-group input {
-    width: 100%;
-    height: 48px;
-    background-color: #ffffff;
+  .email-input {
+    width: 364px;
+    height: 54px;
+    background-color: #fffafa;
     border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 0 15px;
+    border-radius: 17px;
+    padding: 0 16px;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
+    max-width: 100%;
   }
 
-  .submit-btn {
-    width: 188px;
-    height: 67px;
-    background-color: #aac3bb;
-    border: 2px solid #000000;
-    border-radius: 15px;
+  .submit-button {
+    width: 203px;
+    height: 56px;
+    background-color: #d2caca;
+    border: 1px solid #000000;
+    border-radius: 17px;
     color: #000000;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 48px;
-    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 1.5px;
     cursor: pointer;
-    align-self: flex-end;
-    margin-top: 80px; /* Based on y-distance between last input and button (6924 - (6844)) */
+    margin-top: 234px; /* 4657 - (4369 + 54) */
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
   }
-  
-  /* Responsive adjustments for smaller screens */
+
   @media (max-width: 412px) {
-    .form-container {
-        padding: 40px 20px;
-    }
-    .form-group label {
-        font-size: 9vw;
-        line-height: 1.4;
-    }
-    .submit-btn {
-        font-size: 7vw;
-        width: 45%;
-        height: 60px;
+    .forgot-password-container {
+      padding-left: 12px;
+      padding-right: 12px;
     }
   }
-</style>.
+</style>

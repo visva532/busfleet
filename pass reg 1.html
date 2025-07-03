@@ -1,138 +1,148 @@
-<section id="registration-form">
-  <main class="form-container">
-    <a href="#" class="back-link">
-      <img src="/page/91083a5f-1d51-410e-bbdc-1d57daba5a21/images/10_458.svg" alt="Back">
-    </a>
-    <form class="registration-form">
-      <div class="form-group">
-        <label for="name">Name :</label>
-        <input type="text" id="name" name="name">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | BusFleet</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <section class="register-section">
+    <div class="register-container">
+      <h1>Create Passenger Account</h1>
+      <p>Register to book and manage your bus trips easily.</p>
+
+      <form class="register-form">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required />
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required />
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="footer-links">
+        <p>Already have an account? <a href="login.html">Login here</a></p>
       </div>
-      <div class="form-group">
-        <label for="language">Language :</label>
-        <input type="text" id="language" name="language">
-      </div>
-      <div class="form-group">
-        <label for="gender">Gender :</label>
-        <input type="text" id="gender" name="gender">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone no :</label>
-        <input type="tel" id="phone" name="phone">
-      </div>
-      <div class="form-group">
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email">
-      </div>
-      <div class="form-group">
-        <label for="password">Passward :</label>
-        <input type="password" id="password" name="password">
-      </div>
-      <button type="submit" class="submit-btn">Get OTP</button>
-    </form>
-  </main>
-</section>
+    </div>
+  </section>
+</body>
+</html>
 <style>
-    * {
+    :root {
+  --primary-color: #005a9c;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --input-bg: #ffffff;
+  --border-color: #ccc;
+}
+
+* {
   box-sizing: border-box;
-}
-body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff01f;
+  padding: 0;
 }
 
-/* CSS from section:registration-form */
-.form-container {
-    max-width: 412px;
-    margin: 0 auto;
-    padding: 68px 22px 126px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.register-section {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+.register-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.register-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+}
+
+.register-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #00457c;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 480px) {
+  .register-container {
+    padding: 20px;
   }
 
-  .back-link {
-    display: inline-block;
-    width: 42px;
-    height: 42px;
-    margin-bottom: 33px; /* Based on y-distance between arrow top and first label top (6301 - 6268) */
+  h1 {
+    font-size: 20px;
   }
+}
 
-  .back-link img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  .registration-form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-group {
-    margin-bottom: 45px; /* Average vertical gap between form groups */
-  }
-  
-  .form-group:last-of-type {
-      margin-bottom: 0;
-  }
-
-  .form-group label {
-    display: block;
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 54px;
-    margin-bottom: 2px; /* Small gap between label and input */
-  }
-
-  .form-group input {
-    width: 100%;
-    height: 48px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 0 15px;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .submit-btn {
-    width: 188px;
-    height: 67px;
-    background-color: #aac3bb;
-    border: 2px solid #000000;
-    border-radius: 15px;
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 48px;
-    text-align: center;
-    cursor: pointer;
-    align-self: flex-end;
-    margin-top: 80px; /* Based on y-distance between last input and button (6924 - (6844)) */
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 412px) {
-    .form-container {
-        padding: 40px 20px;
-    }
-    .form-group label {
-        font-size: 9vw;
-        line-height: 1.4;
-    }
-    .submit-btn {
-        font-size: 7vw;
-        width: 45%;
-        height: 60px;
-    }
-  }
 </style>

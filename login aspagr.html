@@ -1,0 +1,121 @@
+<section id="login-selection">
+  <div class="login-container">
+    <header class="login-header">
+      <a href="#" class="back-button" aria-label="Go back">
+        <img src="/page/f036a2bc-8327-4743-a918-aeb0a5aba609/images/10_431.svg" alt="Back arrow">
+      </a>
+    </header>
+    <main class="login-main">
+      <h1 class="login-title">Login as ?</h1>
+      <nav class="login-options" aria-label="User role selection">
+        <a href="#" class="login-btn passenger-btn">Passenger</a>
+        <a href="#" class="login-btn driver-btn">Driver</a>
+        <a href="#" class="login-btn admin-btn">Admin</a>
+      </nav>
+    </main>
+  </div>
+</section>
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Jockey One', sans-serif;
+  background-color: #fff01f;
+}
+
+/* CSS from section:login */
+.login-container {
+    max-width: 412px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 71px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-header {
+    margin-bottom: 20px; /* Based on vertical distance between arrow and title */
+  }
+
+  .back-button {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+  }
+
+  .back-button img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .login-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-title {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.4; /* Approximation of 69.9px / 50px */
+    color: #000000;
+    margin: 0;
+    align-self: flex-start;
+    /* Margin calculated from top of title to top of first button */
+    margin-bottom: calc(5480px - 5313px - 56px); /* A more realistic visual gap */
+  }
+
+  .login-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* Gap calculated from space between button rectangles */
+    gap: 37px; /* Average of (5577 - 5542) and (5678 - 5639) */
+  }
+
+  .login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 62px;
+    border-radius: 10px;
+    background-color: #f4eeee;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.4; /* Approximation of 55.9px / 40px */
+  }
+
+  .passenger-btn {
+    color: #100e0e;
+    border: 1px solid #000000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #f9bd23;
+  }
+
+  .driver-btn {
+    color: #141111;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #f1c42f;
+  }
+
+  .admin-btn {
+    color: #000000;
+  }
+
+  @media (max-width: 412px) {
+    .login-container {
+      padding: 40px 20px;
+    }
+    .login-title {
+        margin-bottom: 80px;
+    }
+  }
+</style>

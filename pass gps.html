@@ -1,0 +1,194 @@
+<section id="section-header">
+  <div class="gps-app-container">
+    <header class="app-header">
+      <div class="header-top">
+        <button class="back-button" aria-label="Go back">
+          <img src="/page/fd3602a8-8f01-44e9-b755-7faa15698540/images/10_3528.svg" alt="Back arrow" />
+        </button>
+        <h1 class="app-title">Get There</h1>
+      </div>
+      <div class="route-selector">
+        <div class="route-input">
+          <p class="route-text">Chennai</p>
+        </div>
+        <img src="/page/fd3602a8-8f01-44e9-b755-7faa15698540/images/10_3511.svg" alt="Swap destinations" class="swap-icon" />
+        <div class="route-input">
+          <p class="route-text">Madurai</p>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<section id="section-map">
+  <div class="gps-app-container">
+    <div class="map-container">
+      <img src="/page/fd3602a8-8f01-44e9-b755-7faa15698540/images/d0958ffbca830368284ec6c305d6a667d238d628.png" alt="Map of route from Chennai to Madurai" class="map-image" />
+      <img src="/page/fd3602a8-8f01-44e9-b755-7faa15698540/images/10_3518.svg" alt="Bus icon" class="map-icon bus-icon" />
+      <img src="/page/fd3602a8-8f01-44e9-b755-7faa15698540/images/10_3519.svg" alt="Account icon" class="map-icon account-icon" />
+    </div>
+  </div>
+</section>
+
+<section id="section-details">
+  <div class="gps-app-container">
+    <div class="details-list">
+      <div class="detail-item">
+        <p class="detail-label">Current location</p>
+        <p class="detail-value">Chengalpattu</p>
+      </div>
+      <div class="detail-item">
+        <p class="detail-label">Next bus stop</p>
+        <p class="detail-value">Arumbakam</p>
+      </div>
+      <div class="detail-item">
+        <p class="detail-label">Arriving in</p>
+        <p class="detail-value">11:00am</p>
+      </div>
+      <div class="detail-item">
+        <p class="detail-label">Weather</p>
+        <p class="detail-value">Sunny</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #a9d4dd;
+  color: #000;
+}
+
+.gps-app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* Header Section */
+#section-header {
+  margin-bottom: 40px;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button img {
+  width: 32px;
+  height: 32px;
+}
+
+.app-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #332f2f;
+}
+
+.route-selector {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.route-input {
+  background-color: #ffffff;
+  border: 1px solid #1f1e1e;
+  border-radius: 8px;
+  padding: 12px 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.route-text {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.swap-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Map Section */
+.map-container {
+  position: relative;
+  width: 100%;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.map-icon {
+  position: absolute;
+}
+
+.bus-icon {
+  width: 30px;
+  height: 30px;
+  top: 20%;
+  left: 70%;
+}
+
+.account-icon {
+  width: 25px;
+  height: 25px;
+  top: 30%;
+  left: 65%;
+}
+
+/* Details Section */
+#section-details {
+  margin-top: 60px;
+}
+
+.details-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.detail-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-label {
+  font-size: 20px;
+  font-weight: 500;
+  color: #555;
+}
+
+.detail-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+
+</style>

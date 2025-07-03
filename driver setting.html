@@ -1,0 +1,156 @@
+<main class="settings-page">
+  <header class="settings-header">
+    <a href="#" class="back-button">
+      <img src="/page/35e844a1-1a14-4fab-83c9-387682c312f0/images/10_1117.svg" alt="Back">
+    </a>
+    <!--merged image-->
+    <!-- The design shows 'Bus.in' on the grey background and 'settings' as a subtitle below. -->
+    <!-- The provided data has a single text node 'Bus.in settings', which is rendered here as-is to match the data. -->
+    <div class="title-container">
+      <img src="/page/35e844a1-1a14-4fab-83c9-387682c312f0/images/10_1106.svg" class="title-bg" alt="">
+      <h1 class="title-text">Bus.in settings</h1>
+    </div>
+  </header>
+
+  <nav class="settings-nav">
+    <ul>
+      <li>
+        <a href="#" class="settings-item">
+          <img src="/page/35e844a1-1a14-4fab-83c9-387682c312f0/images/10_1111.svg" alt="" class="settings-chevron">
+          <img src="/page/35e844a1-1a14-4fab-83c9-387682c312f0/images/10_1112.svg" alt="" class="settings-icon">
+          <span class="settings-label">Password & security</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="settings-item">
+          <img src="/page/35e844a1-1a14-4fab-83c9-387682c312f0/images/10_1113.svg" alt="" class="settings-chevron">
+          <img src="/page/35e844a1-1a14-4fab-83c9-387682c312f0/images/10_1116.svg" alt="" class="settings-icon">
+          <span class="settings-label">About Us</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="settings-item">
+          <img src="/page/35e844a1-1a14-4fab-83c9-387682c312f0/images/10_1114.svg" alt="" class="settings-chevron">
+          <img src="/page/35e844a1-1a14-4fab-83c9-387682c312f0/images/10_1115.svg" alt="" class="settings-icon">
+          <span class="settings-label">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</main>
+<style>
+    :root {
+  --text-dark: #000000;
+  --text-light: #fff9f9;
+  --background-light: #fefefe;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color:83D8EB;
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* CSS from section:main */
+.settings-page {
+    max-width: 412px;
+    width: 100%;
+    min-height: 917px;
+    margin: 0 auto;
+    background-color: 83D8EB;
+    padding: 58px 16px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .settings-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .back-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .title-container {
+    position: relative;
+    width: 264px;
+    height: 42px;
+    margin-top: 21px; /* Vertical distance from back button to title bg: 9421 - 9400 = 21px */
+    margin-left: 58px; /* Horizontal distance from back button to title bg: 6837 - 6779 = 58px */
+  }
+
+  .title-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .title-text {
+    position: absolute;
+    top: 50%;
+    left: 42px; /* Horizontal distance from title bg to text: 6879 - 6837 = 42px */
+    transform: translateY(-50%);
+    margin: 0;
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.5; /* 45px / 30px */
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+  }
+
+  .settings-nav {
+    margin-top: 142px; /* Vertical distance from title bg to first item: 9605 - (9421 + 42) = 142px */
+  }
+
+  .settings-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 88px; /* Approximate vertical gap between items, based on 9693 - 9605 = 88px */
+  }
+
+  .settings-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .settings-icon {
+    margin-left: 6px; /* Horizontal gap between chevron and icon: 6829 - (6763 + 60) ≈ 6px */
+  }
+
+  .settings-label {
+    margin-left: 22px; /* Horizontal gap between icon and text: 6891 - (6829 + 40) = 22px */
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5; /* 36px / 24px */
+    letter-spacing: 1.2px;
+  }
+</style>

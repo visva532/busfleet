@@ -1,0 +1,195 @@
+<section id="notifications">
+  <div class="notification-container">
+    <header class="notification-header">
+      <a href="#" aria-label="Go back">
+        <img src="/page/5d2540a4-1c4a-4048-a67c-6359e6b7940d/images/10_1422.svg" alt="Back arrow" class="back-icon">
+      </a>
+      <h1 class="header-title">Notification</h1>
+    </header>
+    <main class="notification-body">
+      <article class="alert-card">
+        <h2 class="alert-title">Fuel alert !</h2>
+        <div class="fuel-card-content">
+          <p class="fuel-message">The fuel is low ,please refil the fuel in near by bulk such us madurai indian oil,arupukottai indian oil .</p>
+          <div class="fuel-card-footer">
+            <span class="date-text">date : 17/6/25</span>
+            <span class="time-text">10 pm</span>
+          </div>
+        </div>
+      </article>
+      <article class="alert-card">
+        <h2 class="alert-title">Booking alert !</h2>
+        <!--merged image-->
+        <div class="booking-card-content">
+          <img src="/page/5d2540a4-1c4a-4048-a67c-6359e6b7940d/images/10_1415.svg" alt="" class="booking-card-bg">
+          <div class="booking-details">
+            <p>Name : visva</p>
+            <p>seat no :   A34</p>
+            <p>From : madurai ,Aarapalayam</p>
+            <p>To :  Chennai,koyembedu</p>
+            <div class="price-info">
+              <span>Rs : 2000</span>
+              <img src="/page/5d2540a4-1c4a-4048-a67c-6359e6b7940d/images/10_1416.svg" alt="Rupee symbol" class="rupee-icon">
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+</section>
+<style>
+    :root {
+  --background-color: #a9d4dd;
+  --header-bg-color: #8FB0B8; /* Approximated from image */
+  --card-bg-color: #fffbfb;
+  --footer-bg-color: #fffefe;
+  --text-color: #000000;
+  --header-height: 111px;
+  --footer-height: 63px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-container {
+  max-width: 412px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+/* CSS from section:header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  height: var(--header-height);
+  z-index: 100;
+  color: var(--text-color);
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* The SVG has its own rounded corners */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 33px;
+}
+
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5; /* 75px */
+  letter-spacing: 2.5px;
+  margin: 0;
+}
+
+.menu-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-button img {
+  width: 41px;
+  height: 33px;
+  display: block;
+}
+
+/* CSS from section:main */
+.bus-list {
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.bus-item {
+  padding-left: 13px; /* Aligns with "Admin" text */
+}
+
+.bus-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5; /* 75px */
+  letter-spacing: 2.5px;
+  margin: 0 0 4px 0;
+}
+
+.bus-card {
+  background-color: var(--card-bg-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.bus-route,
+.bus-time {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5; /* 37.5px */
+  letter-spacing: 1.25px;
+  margin: 0;
+}
+
+/* CSS from section:footer */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  height: var(--footer-height);
+  background-color: var(--footer-bg-color);
+  z-index: 100;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.nav-link img {
+  display: block;
+  height: 42px;
+  width: auto;
+}
+
+.nav-link .settings-icon {
+  border: 2.31px solid #000001;
+  border-radius: 2px; /* To soften the sharp corners of the border */
+  height: 39px;
+}
+</style>

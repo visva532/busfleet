@@ -1,0 +1,212 @@
+<section id="section-header">
+  <header class="site-header">
+    <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_817.svg" class="header-background" alt="Header background shape">
+    <div class="header-content">
+      <h1 class="header-title">Admin</h1>
+      <button class="menu-button" aria-label="Open menu">
+        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_818.svg" alt="Menu icon">
+      </button>
+    </div>
+  </header>
+</section>
+<main id="section-main" class="page-container">
+  <div class="bus-list">
+    <article class="bus-item">
+      <h2 class="bus-title">Bus 1</h2>
+      <div class="bus-card">
+        <p class="bus-route">Chennai-madurai</p>
+        <p class="bus-time">19:50-06:45</p>
+      </div>
+    </article>
+
+    <article class="bus-item">
+      <h2 class="bus-title">Bus 2</h2>
+      <div class="bus-card">
+        <p class="bus-route">Chennai-tirunelveli</p>
+        <p class="bus-time">19:30-06:25</p>
+      </div>
+    </article>
+
+    <article class="bus-item">
+      <h2 class="bus-title">Bus 3</h2>
+      <div class="bus-card">
+        <p class="bus-route">Chennai-trichy</p>
+        <p class="bus-time">17:50-06:15</p>
+      </div>
+    </article>
+  </div>
+</main>
+<section id="section-footer">
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="#home" class="nav-link active">
+        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_813.svg" alt="Home">
+      </a>
+      <a href="#settings" class="nav-link">
+        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_814.svg" alt="Settings" class="settings-icon">
+      </a>
+      <a href="#notifications" class="nav-link">
+        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/I10_816_0_220.svg" alt="Notifications">
+      </a>
+      <a href="#profile" class="nav-link">
+        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_815.svg" alt="Profile">
+      </a>
+    </nav>
+  </footer>
+</section>
+<style>
+    :root {
+  --background-color: #a9d4dd;
+  --header-bg-color: #8FB0B8; /* Approximated from image */
+  --card-bg-color: #fffbfb;
+  --footer-bg-color: #fffefe;
+  --text-color: #000000;
+  --header-height: 111px;
+  --footer-height: 63px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-container {
+  max-width: 412px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+/* CSS from section:header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  height: var(--header-height);
+  z-index: 100;
+  color: var(--text-color);
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* The SVG has its own rounded corners */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 33px;
+}
+
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5; /* 75px */
+  letter-spacing: 2.5px;
+  margin: 0;
+}
+
+.menu-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-button img {
+  width: 41px;
+  height: 33px;
+  display: block;
+}
+
+/* CSS from section:main */
+.bus-list {
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.bus-item {
+  padding-left: 13px; /* Aligns with "Admin" text */
+}
+
+.bus-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5; /* 75px */
+  letter-spacing: 2.5px;
+  margin: 0 0 4px 0;
+}
+
+.bus-card {
+  background-color: var(--card-bg-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.bus-route,
+.bus-time {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5; /* 37.5px */
+  letter-spacing: 1.25px;
+  margin: 0;
+}
+
+/* CSS from section:footer */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  height: var(--footer-height);
+  background-color: var(--footer-bg-color);
+  z-index: 100;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.nav-link img {
+  display: block;
+  height: 42px;
+  width: auto;
+}
+
+.nav-link .settings-icon {
+  border: 2.31px solid #000001;
+  border-radius: 2px; /* To soften the sharp corners of the border */
+  height: 39px;
+}
+</style>

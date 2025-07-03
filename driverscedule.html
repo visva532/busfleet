@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driver Schedule | Bus Fleet Management</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #003366;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #003366;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr.today {
+      background-color: #e0f7fa;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #fff;
+        padding: 10px;
+      }
+
+      td {
+        text-align: left;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+
+      td:nth-of-type(1)::before { content: "Date"; }
+      td:nth-of-type(2)::before { content: "Shift"; }
+      td:nth-of-type(3)::before { content: "Route"; }
+      td:nth-of-type(4)::before { content: "Stops"; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Driver Weekly Schedule</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Shift</th>
+          <th>Route</th>
+          <th>Stops</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="today">
+          <td>July 3, 2025</td>
+          <td>6:00 AM - 12:00 PM</td>
+          <td>Chennai → Trichy</td>
+          <td>Chennai, Villupuram, Perambalur, Trichy</td>
+        </tr>
+        <tr>
+          <td>July 4, 2025</td>
+          <td>2:00 PM - 8:00 PM</td>
+          <td>Trichy → Salem</td>
+          <td>Trichy, Namakkal, Salem</td>
+        </tr>
+        <tr>
+          <td>July 5, 2025</td>
+          <td>6:30 AM - 1:00 PM</td>
+          <td>Salem → Coimbatore</td>
+          <td>Salem, Erode, Tiruppur, Coimbatore</td>
+        </tr>
+        <tr>
+          <td>July 6, 2025</td>
+          <td>OFF</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>July 7, 2025</td>
+          <td>4:00 PM - 10:00 PM</td>
+          <td>Coimbatore → Madurai</td>
+          <td>Coimbatore, Karur, Madurai</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

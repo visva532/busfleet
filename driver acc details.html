@@ -1,0 +1,198 @@
+<section id="profile">
+  <div class="profile-container">
+    <header class="profile-header">
+      <a href="#" aria-label="Go back">
+        <img src="/page/e532b267-c6ce-4d6a-a6ad-224d9c5808cd/images/10_1280.svg" alt="Back arrow" class="back-arrow-icon">
+      </a>
+    </header>
+
+    <div class="avatar-container">
+      <img src="/page/e532b267-c6ce-4d6a-a6ad-224d9c5808cd/images/10_1269.svg" alt="User avatar" class="avatar-icon">
+    </div>
+
+    <main class="details-list">
+      <div class="detail-item">
+        <label class="detail-label">Name</label>
+        <div class="detail-value">Tharun</div>
+      </div>
+      <div class="detail-item">
+        <label class="detail-label">Accident Records</label>
+        <div class="detail-value">None</div>
+      </div>
+      <div class="detail-item">
+        <label class="detail-label">Licence No</label>
+        <div class="detail-value license-no">46334664</div>
+      </div>
+      <div class="detail-item">
+        <label class="detail-label">Phone Number</label>
+        <div class="detail-value">8768545666</div>
+      </div>
+    </main>
+  </div>
+</section>
+<style>
+    :root {
+  --seat-width: 56px;
+  --seat-height: 101px;
+  --border-radius-seat: 10px;
+  --color-available: #a37e49;
+  --color-selected: #339d18;
+  --color-booked: #a9d4dd;
+  --color-your-seat: #ffa1a1;
+  --color-unavailable: rgba(255, 0, 0, 0.37);
+  --color-border-red: #ff0000;
+  --color-border-green: #339d18;
+  --color-border-light-green: #43e01c;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* CSS from section:seat-selection */
+.seat-selection-container {
+  width: 100%;
+  max-width: 412px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+
+.booking-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.back-button img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.travels-title {
+  flex-grow: 1;
+  border: 1px solid var(--color-text-dark);
+  border-radius: 17px;
+  margin-left: 7px;
+  padding: 18px 10px;
+}
+
+.travels-name {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--color-text-dark);
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+}
+
+.seat-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: var(--seat-height);
+}
+
+.seat-pair {
+  display: flex;
+  gap: 25px;
+}
+
+.seat, .seat-placeholder {
+  width: var(--seat-width);
+  height: var(--seat-height);
+}
+
+.seat {
+  border-radius: var(--border-radius-seat);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.seat-text-large {
+  font-size: 20px;
+}
+
+.seat-text-small {
+  font-size: 17px;
+}
+
+.seat-text-multiline {
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.seat.unavailable {
+  background-color: var(--color-unavailable);
+}
+
+.seat.available {
+  background-color: var(--color-available);
+}
+
+.seat.booked {
+  background-color: var(--color-booked);
+  border: 2px solid var(--color-border-red);
+}
+
+.seat.selected {
+  background-color: var(--color-selected);
+  border: 2px solid var(--color-border-green);
+}
+
+.seat.your-seat {
+  background-color: var(--color-your-seat);
+  border: 2px solid #fd3535;
+}
+
+.seat.available-border-green {
+  background-color: var(--color-available);
+  border: 2px solid var(--color-border-green);
+}
+
+.seat.available-border-light-green {
+  background-color: var(--color-available);
+  border: 1px solid var(--color-border-light-green);
+}
+
+@media (max-width: 420px) {
+  .seat-selection-container {
+    padding: 20px 15px;
+  }
+  .travels-name {
+    font-size: 24px;
+  }
+  .booking-header {
+    margin-bottom: 40px;
+  }
+  .seat-layout {
+    gap: 20px;
+  }
+}
+</style>

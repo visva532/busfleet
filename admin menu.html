@@ -1,0 +1,214 @@
+<section id="admin-panel">
+  <div class="admin-container">
+    <header class="app-header">
+      <button class="menu-toggle-btn" aria-label="Open menu">
+        <img src="/page/79223e6c-cd56-47a8-bb36-6dbf9bc64569/images/10_948.svg" alt="Menu Icon">
+      </button>
+    </header>
+
+    <main class="bus-list">
+      <article class="bus-item">
+        <h2 class="bus-title">Bus 1</h2>
+        <div class="bus-card">
+          <p class="bus-route">Chennai-madurai</p>
+          <p class="bus-time">19:50-06:45</p>
+        </div>
+      </article>
+
+      <article class="bus-item">
+        <h2 class="bus-title">Bus 2</h2>
+        <div class="bus-card">
+          <p class="bus-route">Chennai-tirunelveli</p>
+          <p class="bus-time">19:30-06:25</p>
+        </div>
+      </article>
+
+      <article class="bus-item">
+        <h2 class="bus-title">Bus 3</h2>
+        <div class="bus-card">
+          <p class="bus-route">Chennai-trichy</p>
+          <p class="bus-time">17:50-06:15</p>
+        </div>
+      </article>
+    </main>
+
+    <!-- The side menu is positioned absolutely over the content. -->
+    <!-- Its visibility would typically be toggled with JavaScript. -->
+    <aside class="side-menu">
+      <div class="side-menu-header">
+        <button class="back-btn" aria-label="Close menu">
+          <img src="/page/79223e6c-cd56-47a8-bb36-6dbf9bc64569/images/10_966.svg" alt="Back Arrow">
+        </button>
+        <h3 class="side-menu-title">Menu</h3>
+      </div>
+      <nav class="side-menu-nav">
+        <ul>
+          <li><a href="#staff-details">Staff details</a></li>
+          <li><a href="#seat-details">Seat deatails</a></li>
+          <li><a href="#bus-details">bus details</a></li>
+          <li><a href="#account-details">Account details</a></li>
+          <li><a href="#gps">Gps</a></li>
+          <li><a href="#stops">Stops</a></li>
+          <li><a href="#fuel-details">Fuel details</a></li>
+          <li><a href="#logout">Log out</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</section>
+<style>
+    :root {
+  --background-color: #a9d4dd;
+  --header-bg-color: #8FB0B8; /* Approximated from image */
+  --card-bg-color: #fffbfb;
+  --footer-bg-color: #fffefe;
+  --text-color: #000000;
+  --header-height: 111px;
+  --footer-height: 63px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-container {
+  max-width: 412px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+/* CSS from section:header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  height: var(--header-height);
+  z-index: 100;
+  color: var(--text-color);
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* The SVG has its own rounded corners */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 33px;
+}
+
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5; /* 75px */
+  letter-spacing: 2.5px;
+  margin: 0;
+}
+
+.menu-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-button img {
+  width: 41px;
+  height: 33px;
+  display: block;
+}
+
+/* CSS from section:main */
+.bus-list {
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.bus-item {
+  padding-left: 13px; /* Aligns with "Admin" text */
+}
+
+.bus-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5; /* 75px */
+  letter-spacing: 2.5px;
+  margin: 0 0 4px 0;
+}
+
+.bus-card {
+  background-color: var(--card-bg-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.bus-route,
+.bus-time {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5; /* 37.5px */
+  letter-spacing: 1.25px;
+  margin: 0;
+}
+
+/* CSS from section:footer */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 412px;
+  height: var(--footer-height);
+  background-color: var(--footer-bg-color);
+  z-index: 100;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.nav-link img {
+  display: block;
+  height: 42px;
+  width: auto;
+}
+
+.nav-link .settings-icon {
+  border: 2.31px solid #000001;
+  border-radius: 2px; /* To soften the sharp corners of the border */
+  height: 39px;
+}
+</style>

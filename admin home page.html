@@ -1,212 +1,274 @@
-<section id="section-header">
-  <header class="site-header">
-    <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_817.svg" class="header-background" alt="Header background shape">
-    <div class="header-content">
-      <h1 class="header-title">Admin</h1>
-      <button class="menu-button" aria-label="Open menu">
-        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_818.svg" alt="Menu icon">
-      </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Home - Bus Fleet Management</title>
+  <link rel="stylesheet" href="admin_home.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-logo">BusFleet Admin</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Bus Details</a></li>
+      <li><a href="#">Staff Details</a></li>
+      <li><a href="#">GPS</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- FUEL DETAILS -->
+    <section class="section">
+      <h2>Bus Fuel Details</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Bus 101</h3>
+          <p>Fuel Level: 70%</p>
+          <p>Last Refill: 2 days ago</p>
+        </div>
+        <div class="card">
+          <h3>Bus 202</h3>
+          <p>Fuel Level: 50%</p>
+          <p>Last Refill: Yesterday</p>
+        </div>
+        <div class="card">
+          <h3>Bus 303</h3>
+          <p>Fuel Level: 85%</p>
+          <p>Last Refill: 3 days ago</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODAY'S RUNNING SHIFTS -->
+    <section class="section">
+      <h2>Today's Bus Running Shifts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Bus Number</th>
+            <th>Driver</th>
+            <th>Shift</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bus 101</td>
+            <td>John D.</td>
+            <td>Morning (6AM - 2PM)</td>
+            <td>Running</td>
+          </tr>
+          <tr>
+            <td>Bus 202</td>
+            <td>Alex P.</td>
+            <td>Afternoon (2PM - 10PM)</td>
+            <td>Scheduled</td>
+          </tr>
+          <tr>
+            <td>Bus 303</td>
+            <td>Mary L.</td>
+            <td>Night (10PM - 6AM)</td>
+            <td>Not Started</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ROUTES -->
+    <section class="section">
+      <h2>Routes of Buses</h2>
+      <ul class="route-list">
+        <li><strong>Bus 101:</strong> City A → City B → City C</li>
+        <li><strong>Bus 202:</strong> City D → City E → City F</li>
+        <li><strong>Bus 303:</strong> City G → City H → City I</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Legal Policy</a>
     </div>
-  </header>
-</section>
-<main id="section-main" class="page-container">
-  <div class="bus-list">
-    <article class="bus-item">
-      <h2 class="bus-title">Bus 1</h2>
-      <div class="bus-card">
-        <p class="bus-route">Chennai-madurai</p>
-        <p class="bus-time">19:50-06:45</p>
-      </div>
-    </article>
-
-    <article class="bus-item">
-      <h2 class="bus-title">Bus 2</h2>
-      <div class="bus-card">
-        <p class="bus-route">Chennai-tirunelveli</p>
-        <p class="bus-time">19:30-06:25</p>
-      </div>
-    </article>
-
-    <article class="bus-item">
-      <h2 class="bus-title">Bus 3</h2>
-      <div class="bus-card">
-        <p class="bus-route">Chennai-trichy</p>
-        <p class="bus-time">17:50-06:15</p>
-      </div>
-    </article>
-  </div>
-</main>
-<section id="section-footer">
-  <footer class="site-footer">
-    <nav class="footer-nav">
-      <a href="#home" class="nav-link active">
-        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_813.svg" alt="Home">
-      </a>
-      <a href="#settings" class="nav-link">
-        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_814.svg" alt="Settings" class="settings-icon">
-      </a>
-      <a href="#notifications" class="nav-link">
-        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/I10_816_0_220.svg" alt="Notifications">
-      </a>
-      <a href="#profile" class="nav-link">
-        <img src="/page/0f75b3ec-f212-4881-8cd1-157bb6db3c26/images/10_815.svg" alt="Profile">
-      </a>
-    </nav>
+    <p>&copy; 2025 Bus Fleet Management System</p>
   </footer>
-</section>
+
+</body>
+</html>
 <style>
-    :root {
-  --background-color: #a9d4dd;
-  --header-bg-color: #8FB0B8; /* Approximated from image */
-  --card-bg-color: #fffbfb;
-  --footer-bg-color: #fffefe;
-  --text-color: #000000;
-  --header-height: 111px;
-  --footer-height: 63px;
-}
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
+  /* Reset & Global Styles */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.page-container {
-  max-width: 412px;
-  margin: 0 auto;
-  position: relative;
-  min-height: 100vh;
-  background-color: var(--background-color);
-  padding-top: var(--header-height);
-  padding-bottom: var(--footer-height);
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* CSS from section:header */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 412px;
-  height: var(--header-height);
-  z-index: 100;
-  color: var(--text-color);
-}
-
-.header-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  /* The SVG has its own rounded corners */
-}
-
-.header-content {
+/* Navbar */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  padding: 0 33px;
+  flex-wrap: wrap;
 }
 
-.header-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 1.5; /* 75px */
-  letter-spacing: 2.5px;
-  margin: 0;
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.menu-button {
-  background: transparent;
-  border: none;
-  padding: 0;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffdd00;
+}
+
+/* Nav Toggle (for mobile) */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  font-size: 2rem;
   cursor: pointer;
 }
 
-.menu-button img {
-  width: 41px;
-  height: 33px;
-  display: block;
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #0056b3;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
+    display: flex;
+  }
 }
 
-/* CSS from section:main */
-.bus-list {
-  padding: 28px 20px;
+/* Main Content */
+.main-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.cards {
   display: flex;
-  flex-direction: column;
-  gap: 22px;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.bus-item {
-  padding-left: 13px; /* Aligns with "Admin" text */
-}
-
-.bus-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 1.5; /* 75px */
-  letter-spacing: 2.5px;
-  margin: 0 0 4px 0;
-}
-
-.bus-card {
-  background-color: var(--card-bg-color);
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-left: 5px solid #007bff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  flex: 1 1 30%;
   border-radius: 5px;
-  padding: 10px 20px;
-  text-align: center;
 }
 
-.bus-route,
-.bus-time {
-  font-family: 'Poppins', sans-serif;
-  font-size: 25px;
-  font-weight: 600;
-  line-height: 1.5; /* 37.5px */
-  letter-spacing: 1.25px;
-  margin: 0;
+.card h3 {
+  margin-bottom: 0.5rem;
 }
 
-/* CSS from section:footer */
-.site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+/* Table */
+table {
   width: 100%;
-  max-width: 412px;
-  height: var(--footer-height);
-  background-color: var(--footer-bg-color);
-  z-index: 100;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-.footer-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  padding: 0 10px;
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
 }
 
-.nav-link img {
-  display: block;
-  height: 42px;
-  width: auto;
+th {
+  background-color: #f1f1f1;
 }
 
-.nav-link .settings-icon {
-  border: 2.31px solid #000001;
-  border-radius: 2px; /* To soften the sharp corners of the border */
-  height: 39px;
+/* Route List */
+.route-list {
+  list-style: none;
+  padding-left: 1rem;
 }
+
+.route-list li {
+  margin: 0.5rem 0;
+  background-color: #e9f5ff;
+  padding: 10px;
+  border-left: 4px solid #007bff;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 </style>

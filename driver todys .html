@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Today's Trip | Driver Panel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .trip-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .trip-card h2 {
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    .trip-info {
+      margin: 15px 0;
+      font-size: 1rem;
+    }
+
+    .trip-info strong {
+      display: inline-block;
+      width: 140px;
+      color: #0055a5;
+    }
+
+    .status {
+      padding: 6px 12px;
+      display: inline-block;
+      background-color: #28a745;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .stops {
+      margin-top: 20px;
+    }
+
+    .stops ul {
+      list-style: disc;
+      margin-left: 30px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 6px 0;
+      }
+
+      .trip-info strong {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">BusFleetPro</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Assigned Buses</a>
+      <a href="#">Today's Trip</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="trip-card">
+      <h2>Today's Trip Details</h2>
+      <div class="trip-info"><strong>Date:</strong> July 3, 2025</div>
+      <div class="trip-info"><strong>Status:</strong> <span class="status">On Schedule</span></div>
+      <div class="trip-info"><strong>Bus Number:</strong> TN07GH1122</div>
+      <div class="trip-info"><strong>Route:</strong> Chennai to Trichy</div>
+      <div class="trip-info"><strong>Departure:</strong> 7:00 AM</div>
+      <div class="trip-info"><strong>Arrival:</strong> 12:30 PM</div>
+
+      <div class="stops">
+        <strong>Stops:</strong>
+        <ul>
+          <li>Chennai Central</li>
+          <li>Kanchipuram</li>
+          <li>Villupuram</li>
+          <li>Trichy Central</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 BusFleetPro. All rights reserved.
+  </footer>
+</body>
+</html>

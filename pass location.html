@@ -1,0 +1,279 @@
+<section id="header" class="header-section">
+    <header class="page-header">
+      <button class="back-button">
+        <img src="/page/ba9642c2-79d0-4334-ab05-0359c4b19886/images/10_3235.svg" alt="Back">
+      </button>
+      <h1 class="page-title">Get There</h1>
+      <img class="transport-icon" src="/page/ba9642c2-79d0-4334-ab05-0359c4b19886/images/f2832107338ca508fc1acedc7fd8d90376594259.png" alt="Bus icon">
+    </header>
+  </section>
+  <section id="route" class="route-section">
+    <div class="route-selector">
+      <div class="location-input">
+        <span>chennai</span>
+      </div>
+      <button class="swap-button">
+        <img src="/page/ba9642c2-79d0-4334-ab05-0359c4b19886/images/10_3213.svg" alt="Swap locations">
+      </button>
+      <div class="location-input">
+        <span>Madurai</span>
+      </div>
+    </div>
+  </section>
+  <section id="map" class="map-section">
+    <div class="map-container">
+      <img src="/page/ba9642c2-79d0-4334-ab05-0359c4b19886/images/d0958ffbca830368284ec6c305d6a667d238d628.png" alt="Map showing route from Chennai to Madurai">
+    </div>
+  </section>
+  <section id="details" class="details-section">
+    <div class="details-container">
+      <div class="drive-info">
+        <div class="info-row">
+          <div class="info-left">
+            <p class="duration-distance">
+              <span class="duration">7 Hr 33 Min</span>
+              <span class="distance">( 450 Km )</span>
+            </p>
+            <p class="route-details">Via NH 98</p>
+            <p class="toll-info">Tolls</p>
+          </div>
+          <a href="#" class="directions-button">
+            <span>Directions</span>
+            <img src="/page/ba9642c2-79d0-4334-ab05-0359c4b19886/images/10_3236.svg" alt="">
+          </a>
+        </div>
+        <hr class="divider">
+      </div>
+      <div class="bus-info">
+        <div class="info-row">
+          <div class="bus-type">
+            <img src="/page/ba9642c2-79d0-4334-ab05-0359c4b19886/images/10_3227.svg" alt="">
+            <p>Bus</p>
+          </div>
+          <p class="bus-duration">(7 Hr 33 Min)</p>
+        </div>
+        <div class="bus-price">
+          <span>From </span>
+          <img src="/page/ba9642c2-79d0-4334-ab05-0359c4b19886/images/10_3230.svg" alt="Rupee symbol">
+          <span class="price-value">470</span>
+        </div>
+        <hr class="divider">
+      </div>
+    </div>
+  </section>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.page-container {
+  max-width: 412px;
+  margin: 0 auto;
+  background-color: #c2e4f0;
+  overflow: hidden;
+}
+
+/* CSS from section:header */
+.header-section {
+    padding: 43px 16px 3px 3px;
+  }
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .back-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .back-button img {
+    width: 42px;
+    height: 42px;
+    display: block;
+  }
+  .page-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: #332f2f;
+    margin: 0;
+  }
+  .transport-icon {
+    width: 60px;
+    height: 42px;
+  }
+
+/* CSS from section:route */
+.route-section {
+    padding: 0 9px;
+    margin-bottom: 24px;
+  }
+  .route-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+  }
+  .location-input {
+    background-color: #d9d9d9;
+    border: 1px solid #1f1e1e;
+    border-radius: 5px;
+    padding: 2px 10px;
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+  }
+  .location-input span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 37.5px;
+    color: #332f2f;
+  }
+  .swap-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .swap-button img {
+    width: 35px;
+    height: 38px;
+    display: block;
+  }
+
+/* CSS from section:map */
+.map-section {
+    margin-bottom: 6px;
+  }
+  .map-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+/* CSS from section:details */
+.details-section {
+    padding: 0 15px;
+  }
+  .details-container .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .drive-info .info-row {
+    align-items: flex-start;
+  }
+  .duration-distance {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+  .duration {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #332f2f;
+  }
+  .distance {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 37.5px;
+    color: #000000;
+  }
+  .route-details, .toll-info {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  .route-details {
+    color: #4d4545;
+    margin-top: 7px;
+  }
+  .toll-info {
+    color: #000000;
+    margin-top: 1px;
+  }
+  .directions-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #d9d9d9;
+    border: 1px solid #1b1919;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 29px;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    white-space: nowrap;
+    margin-top: 10px;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 33px 0;
+  }
+  .bus-type {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .bus-type img {
+    width: 24px;
+    height: 24px;
+  }
+  .bus-type p {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 37.5px;
+    color: #000000;
+  }
+  .bus-duration {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #332f2f;
+  }
+  .bus-price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 37.5px;
+    color: #4d4545;
+  }
+  .bus-price img {
+    width: 15px;
+    height: 24px;
+  }
+  .bus-price .price-value {
+    font-family: 'Jockey One', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    color: #4d4545;
+  }
+  </style>

@@ -1,469 +1,226 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="home-page">
-      <div class="div">
-        <div class="overlap-group">
-          <div class="rectangle"></div>
-          <div class="rectangle-2"></div>
-          <div class="text-wrapper">Location 1</div>
-          <div class="text-wrapper-2">From</div>
-          <img class="location-on" src="https://c.animaapp.com/mcn3hqz9Y9160i/img/location-on.svg" />
-          <img class="image" src="https://c.animaapp.com/mcn3hqz9Y9160i/img/image-1.png" />
-          <div class="ellipse"></div>
-          <img class="img" src="https://c.animaapp.com/mcn3hqz9Y9160i/img/image-2.png" />
-          <div class="text-wrapper-3">To</div>
-          <div class="text-wrapper-4">Location 2</div>
-          <div class="text-wrapper-5">...</div>
-          <div class="text-wrapper-6">Bus</div>
-          <img class="bus" src="https://c.animaapp.com/mcn3hqz9Y9160i/img/bus-4.png" />
-          <img class="bus-2" src="https://c.animaapp.com/mcn3hqz9Y9160i/img/bus-4.png" />
-          <div class="rounded-rectangle"></div>
-          <div class="text-wrapper-7">Valid till : 31July</div>
-          <p class="save-upto-rs">Save Upto Rs 500 With ICICI<br />Netbanking</p>
-          <div class="rectangle-3"></div>
-          <div class="rectangle-4"></div>
-          <div class="text-wrapper-8">PAYMENT</div>
-          <div class="rectangle-5"></div>
-          <div class="rectangle-6"></div>
-          <img class="image-2" src="https://c.animaapp.com/mcn3hqz9Y9160i/img/image-3.png" />
-          <div class="rectangle-7"></div>
-          <div class="text-wrapper-9">Offer</div>
-        </div>
-        <div class="overlap">
-          <div class="overlap-2">
-            <div class="text-wrapper-10">Sun 14 Jul 2025</div>
-            <div class="text-wrapper-11">Depart</div>
-          </div>
-          <div class="text-wrapper-12">Passenger</div>
-          <div class="rectangle-8"></div>
-          <div class="rectangle-9"></div>
-        </div>
-        <div class="div-wrapper"><div class="text-wrapper-13">Search</div></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1 class="brand">...</h1>
+      <h2 class="title">Bus</h2>
+    </header>
+
+    <section class="offer-section">
+      <div class="offer-card">
+        <p class="offer-text">Save Upto Rs 500 With ICICI<br />Netbanking</p>
+        <span class="offer-validity">Valid till : 31 July</span>
+        <div class="offer-tag">Offer</div>
+        <img src="https://c.animaapp.com/mcn3hqz9Y9160i/img/image-3.png" alt="Offer Icon" class="offer-img" />
       </div>
+    </section>
+
+    <section class="location-section">
+      <div class="location-box">
+        <img src="https://c.animaapp.com/mcn3hqz9Y9160i/img/image-1.png" alt="From Icon" />
+        <div>
+          <span class="label">From</span>
+          <h3 class="location">Location 1</h3>
+        </div>
+      </div>
+
+      <div class="location-box">
+        <img src="https://c.animaapp.com/mcn3hqz9Y9160i/img/image-2.png" alt="To Icon" />
+        <div>
+          <span class="label">To</span>
+          <h3 class="location">Location 2</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="travel-info">
+      <div>
+        <span class="info-label">Passenger</span>
+      </div>
+      <div>
+        <span class="info-label">Depart</span>
+        <span class="info-date">Sun 14 Jul 2025</span>
+      </div>
+    </section>
+
+    <div class="search-btn">
+      <button>Search</button>
     </div>
-  </body>
+  </div>
+</body>
 </html>
 <style>
-    .home-page {
-  background-color: #fefdfd;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.home-page .div {
+body {
   background-color: #fefdfd;
-  overflow: hidden;
-  width: 412px;
-  height: 917px;
+  color: #000;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 152, 0, 1) 52%,
+    rgba(255, 196, 16, 1) 76%,
+    rgba(255, 240, 31, 1) 100%
+  );
+  padding: 40px 20px;
+  border-radius: 0 0 50px 50px;
+}
+
+.brand {
+  font-size: 48px;
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+.title {
+  font-size: 40px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.offer-section {
+  margin-top: 20px;
+}
+
+.offer-card {
+  background-color: #bf9455;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
   position: relative;
 }
 
-.home-page .overlap-group {
-  position: absolute;
-  width: 412px;
-  height: 576px;
-  top: 38px;
-  left: -1px;
+.offer-text {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.home-page .rectangle {
-  position: absolute;
-  width: 412px;
-  height: 388px;
-  top: 13px;
-  left: 0;
-  border-radius: 0px 0px 50px 50px;
-  border: 1px solid;
-  border-color: #000000;
-  background: linear-gradient(
-      180deg,
-      rgba(255, 193, 7, 0) 0%,
-      rgba(255, 193, 7, 0.2) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 152, 0, 1) 52%,
-      rgba(255, 196, 16, 1) 76%,
-      rgba(255, 240, 31, 1) 100%
-    );
-}
-
-.home-page .rectangle-2 {
-  position: absolute;
-  width: 376px;
-  height: 190px;
-  top: 386px;
-  left: 23px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  border: 1px solid;
-  border-color: #181717;
-}
-
-.home-page .text-wrapper {
-  width: 179px;
-  top: 429px;
-  left: 99px;
-  position: absolute;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #ff9801;
-  font-size: 33px;
-  letter-spacing: 1.65px;
-  line-height: normal;
-}
-
-.home-page .text-wrapper-2 {
-  position: absolute;
-  top: 399px;
-  left: 97px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 25px;
-  letter-spacing: 1.25px;
-  line-height: normal;
-}
-
-.home-page .location-on {
-  position: absolute;
-  width: 35px;
-  height: 25px;
-  top: 496px;
-  left: 59px;
-}
-
-.home-page .image {
-  width: 23px;
-  height: 23px;
-  top: 407px;
-  left: 61px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.home-page .ellipse {
-  position: absolute;
-  width: 45px;
-  height: 42px;
-  top: 457px;
-  left: 329px;
-  background-color: #d9d9d9;
-  border-radius: 22.5px / 21px;
-  border: 1px solid;
-  border-color: #000000;
-}
-
-.home-page .img {
-  width: 29px;
-  height: 29px;
-  top: 466px;
-  left: 337px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.home-page .text-wrapper-3 {
-  position: absolute;
-  top: 489px;
-  left: 97px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 25px;
-  letter-spacing: 1.25px;
-  line-height: normal;
-}
-
-.home-page .text-wrapper-4 {
-  top: 519px;
-  left: 97px;
-  position: absolute;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #ff9801;
-  font-size: 33px;
-  letter-spacing: 1.65px;
-  line-height: normal;
-}
-
-.home-page .text-wrapper-5 {
-  position: absolute;
-  top: 0;
-  left: 15px;
-  font-family: "Kay Pho Du", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 64px;
-  letter-spacing: 3.20px;
-  line-height: normal;
-}
-
-.home-page .text-wrapper-6 {
-  position: absolute;
-  top: 85px;
-  left: 15px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 40px;
-  letter-spacing: 2.00px;
-  line-height: normal;
-}
-
-.home-page .bus {
-  top: 495px;
-  left: 129px;
-  position: absolute;
-  width: 33px;
-  height: 33px;
-  object-fit: cover;
-}
-
-.home-page .bus-2 {
-  top: 405px;
-  left: 166px;
-  position: absolute;
-  width: 33px;
-  height: 33px;
-  object-fit: cover;
-}
-
-.home-page .rounded-rectangle {
-  position: absolute;
-  width: 403px;
-  height: 195px;
-  top: 168px;
-  left: 6px;
-  background-color: #bf9455;
-  border-radius: 10px;
-  border: 2px solid;
-  border-color: #000000;
-}
-
-.home-page .text-wrapper-7 {
-  position: absolute;
-  top: 266px;
-  left: 24px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #222227;
+.offer-validity {
   font-size: 14px;
-  letter-spacing: 0.70px;
-  line-height: normal;
+  color: #222;
 }
 
-.home-page .save-upto-rs {
-  position: absolute;
-  top: 198px;
-  left: 24px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 1.00px;
-  line-height: normal;
-}
-
-.home-page .rectangle-3 {
-  position: absolute;
-  width: 65px;
-  height: 105px;
-  top: 251px;
-  left: 287px;
+.offer-tag {
   background-color: #d9d9d9;
-  border: 1px solid;
-  border-color: #000000;
-}
-
-.home-page .rectangle-4 {
-  position: absolute;
-  width: 63px;
-  height: 14px;
-  top: 252px;
-  left: 288px;
-  background-color: #c74848;
-}
-
-.home-page .text-wrapper-8 {
-  position: absolute;
-  top: 250px;
-  left: 293px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 11px;
-  letter-spacing: 0.55px;
-  line-height: normal;
-}
-
-.home-page .rectangle-5 {
-  position: absolute;
-  width: 53px;
-  height: 7px;
-  top: 278px;
-  left: 294px;
-  background-color: #4d454554;
-  border-radius: 5px;
-  border: 0px none;
-}
-
-.home-page .rectangle-6 {
-  position: absolute;
-  width: 39px;
-  height: 4px;
-  top: 292px;
-  left: 301px;
-  background-color: #aba8a8;
-  border-radius: 5px;
-}
-
-.home-page .image-2 {
-  width: 31px;
-  height: 31px;
-  top: 311px;
-  left: 304px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.home-page .rectangle-7 {
-  position: absolute;
-  width: 90px;
-  height: 38px;
-  top: 308px;
-  left: 23px;
-  background-color: #d9d9d9;
+  color: #000;
   border-radius: 10px;
+  padding: 5px 15px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-.home-page .text-wrapper-9 {
-  position: absolute;
-  top: 310px;
-  left: 35px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #000000;
+.offer-img {
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+.location-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.location-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid #181717;
+}
+
+.label {
+  font-size: 18px;
+  color: #000;
+}
+
+.location {
   font-size: 24px;
-  letter-spacing: 1.20px;
-  line-height: normal;
+  color: #ff9801;
 }
 
-.home-page .overlap {
-  position: absolute;
-  width: 376px;
-  height: 152px;
-  top: 620px;
-  left: 27px;
-  background-color: #fff8f8;
+.travel-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background: #fff8f8;
+  padding: 20px;
   border-radius: 20px;
-  border: 1px solid;
-  border-color: #191818;
+  border: 1px solid #191818;
 }
 
-.home-page .overlap-2 {
-  position: absolute;
-  width: 220px;
-  height: 77px;
-  top: 68px;
-  left: 66px;
+.info-label {
+  font-size: 20px;
+  color: #e28a32;
 }
 
-.home-page .text-wrapper-10 {
-  position: absolute;
-  top: 36px;
-  left: 0;
-  font-family: "Poppins", Helvetica;
-  font-weight: 400;
+.info-date {
+  font-size: 20px;
   color: #736653;
-  font-size: 27px;
-  letter-spacing: 1.35px;
-  line-height: normal;
 }
 
-.home-page .text-wrapper-11 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: "Poppins", Helvetica;
-  font-weight: 400;
-  color: #e28a32;
-  font-size: 27px;
-  letter-spacing: 1.35px;
-  line-height: normal;
+.search-btn {
+  text-align: center;
 }
 
-.home-page .text-wrapper-12 {
-  position: absolute;
-  top: 6px;
-  left: 65px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 400;
-  color: #e28a32;
-  font-size: 27px;
-  letter-spacing: 1.35px;
-  line-height: normal;
-}
-
-.home-page .rectangle-8 {
-  position: absolute;
-  width: 28px;
-  height: 15px;
-  top: 20px;
-  left: 17px;
-  background-color: #7a82b6;
-  border-radius: 10px;
-  border: 1px solid;
-  border-color: #000000;
-}
-
-.home-page .rectangle-9 {
-  position: absolute;
-  width: 28px;
-  height: 15px;
-  top: 83px;
-  left: 17px;
+.search-btn button {
+  padding: 15px 30px;
   background-color: #ff9c01;
-  border-radius: 10px;
-  border: 1px solid;
-  border-color: #000000;
-}
-
-.home-page .div-wrapper {
-  position: absolute;
-  width: 144px;
-  height: 52px;
-  top: 788px;
-  left: 140px;
-  background-color: #ff9c01;
+  border: 1px solid #000;
   border-radius: 20px;
-  border: 1px solid;
-  border-color: #000000;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.home-page .text-wrapper-13 {
-  position: absolute;
-  top: 2px;
-  left: 9px;
-  font-family: "Poppins", Helvetica;
-  font-weight: 500;
-  color: #000000;
-  font-size: 32px;
-  letter-spacing: 1.60px;
-  line-height: normal;
-}
-:root {
-  --m3syslighton-surface: rgba(29, 27, 32, 1);
+/* Media Query for larger screens */
+@media (min-width: 768px) {
+  .location-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .location-box {
+    width: 48%;
+  }
+
+  .travel-info {
+    padding: 30px;
+  }
+
+  .search-btn button {
+    font-size: 28px;
+  }
+
+  .offer-text {
+    font-size: 20px;
+  }
 }
 
 </style>

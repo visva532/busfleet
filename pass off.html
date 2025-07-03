@@ -2,171 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICICI ₹500 Cashback Offer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="desktop-style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ICICI Offer | BusFleet</title>
+  <link rel="stylesheet" href="icici-offer.css" />
 </head>
 <body>
-  <main class="offer-section">
-    <div class="offer-card">
+  <section class="offer-section">
+    <div class="offer-container">
       <div class="offer-header">
-        <img src="https://c.animaapp.com/mcn6cvhdUSex2h/img/arrow-left.svg" alt="Back" class="arrow-icon" />
-        <h1 class="title">Offers</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/ICICI_Bank_Logo.svg" alt="ICICI Bank Logo" class="icici-logo" />
+        <h1>Get up to ₹500 Cashback!</h1>
+        <p class="offer-description">Pay using ICICI Bank Debit or Credit Card and get exciting cashback on your first bus booking.</p>
       </div>
 
-      <div class="offer-banner">
-        <div class="banner-content">
-          <h2>Save Upto ₹500 With ICICI Netbanking</h2>
-          <p class="valid-till">Valid till: 31 July</p>
-        </div>
-        <div class="bank-card">
-          <div class="card-top">PAYMENT</div>
-          <div class="card-chip"></div>
-          <div class="card-strip"></div>
-          <img src="https://c.animaapp.com/mcn6cvhdUSex2h/img/image-3.png" alt="ICICI Bank Logo" />
-        </div>
-      </div>
-
-      <section class="terms">
-        <h3>Terms & Conditions</h3>
+      <div class="terms-box">
+        <h2>Terms & Conditions</h2>
         <ul>
-          <li>10% cashback up to ₹500 on using ICICI debit/credit cards</li>
-          <li>Min. Transaction: ₹1,000 in a single order</li>
-          <li>Max Cashback: ₹500 per user/card during the offer period</li>
-          <li>Crediting Time: Within 90 days post-offer end</li>
-          <li>Restriction: One transaction per card; cannot be combined with other offers</li>
+          <li>Offer valid only for ICICI Bank cardholders.</li>
+          <li>Minimum transaction value should be ₹300.</li>
+          <li>Maximum cashback of ₹500 per user.</li>
+          <li>Cashback will be credited within 7 working days.</li>
+          <li>Offer valid until <strong>31st August 2025</strong>.</li>
+          <li>This offer cannot be combined with other promotional offers.</li>
+          <li>BusFleet reserves the right to modify or withdraw the offer at any time.</li>
         </ul>
-      </section>
+      </div>
+
+      <div class="cta">
+        <a href="book-now.html" class="cta-button">Book Now</a>
+      </div>
     </div>
-  </main>
+  </section>
 </body>
 </html>
 <style>
-    body {
+    :root {
+  --primary-color: #e84e0f;
+  --background-color: #fefefe;
+  --text-color: #333;
+  --card-bg: #fff9f5;
+  --border-color: #e2e2e2;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f5f5f5;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
 }
 
 .offer-section {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.offer-card {
-  background-color: #ffffff;
-  max-width: 900px;
   width: 100%;
+  max-width: 600px;
+}
+
+.offer-container {
+  background-color: var(--card-bg);
+  padding: 30px;
   border-radius: 12px;
-  border: 2px solid #000;
-  padding: 2rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  text-align: center;
 }
 
-.offer-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+.icici-logo {
+  width: 120px;
+  margin-bottom: 10px;
 }
 
-.arrow-icon {
-  width: 40px;
-  height: auto;
+.offer-header h1 {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  margin: 0;
+.offer-description {
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-.offer-banner {
-  background-color: #bf9455;
-  border-radius: 12px;
-  padding: 1.5rem;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+.terms-box {
+  text-align: left;
+  margin-top: 20px;
 }
 
-.banner-content h2 {
-  font-size: 1.8rem;
-  margin: 0;
+.terms-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
-.valid-till {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #222;
-}
-
-.bank-card {
-  background-color: #d9d9d9;
-  width: 130px;
-  height: 85px;
-  border: 1px solid #000;
-  border-radius: 8px;
-  padding: 0.5rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-top {
-  background-color: #c74848;
-  color: white;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.75rem;
-  border-radius: 4px;
-  font-weight: 500;
-}
-
-.card-chip {
-  background-color: #4d4545;
-  width: 60%;
-  height: 7px;
-  border-radius: 4px;
-}
-
-.card-strip {
-  background-color: #aba8a8;
-  width: 50%;
-  height: 4px;
-  border-radius: 4px;
-}
-
-.bank-card img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
-
-.terms {
-  font-size: 1rem;
-}
-
-.terms h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.terms ul {
+.terms-box ul {
   list-style-type: disc;
-  padding-left: 1.5rem;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #555;
 }
 
-.terms ul li {
-  margin-bottom: 0.75rem;
+.terms-box li {
+  margin-bottom: 8px;
+}
+
+.cta {
+  margin-top: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #c33d07;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .offer-container {
+    padding: 20px;
+  }
+
+  .offer-header h1 {
+    font-size: 18px;
+  }
+
+  .terms-box h2 {
+    font-size: 16px;
+  }
 }
 
 </style>

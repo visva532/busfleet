@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assigned Buses | Bus Fleet Management</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f4f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .bus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .bus-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .bus-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .bus-card h3 {
+      margin-bottom: 10px;
+      color: #0055a5;
+    }
+
+    .bus-info {
+      margin: 8px 0;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 6px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">BusFleetPro</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">My Trips</a>
+      <a href="#">Assigned Buses</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>My Assigned Buses</h2>
+
+    <div class="bus-grid">
+      <div class="bus-card">
+        <h3>Bus #TN45AB1234</h3>
+        <div class="bus-info"><strong>Route:</strong> Chennai to Madurai</div>
+        <div class="bus-info"><strong>Shift:</strong> Morning</div>
+        <div class="bus-info"><strong>Departure:</strong> 6:00 AM</div>
+        <div class="bus-info"><strong>Arrival:</strong> 11:30 AM</div>
+      </div>
+
+      <div class="bus-card">
+        <h3>Bus #TN01XY5678</h3>
+        <div class="bus-info"><strong>Route:</strong> Chennai to Coimbatore</div>
+        <div class="bus-info"><strong>Shift:</strong> Night</div>
+        <div class="bus-info"><strong>Departure:</strong> 10:00 PM</div>
+        <div class="bus-info"><strong>Arrival:</strong> 5:00 AM</div>
+      </div>
+
+      <div class="bus-card">
+        <h3>Bus #TN32KL8910</h3>
+        <div class="bus-info"><strong>Route:</strong> Chennai to Salem</div>
+        <div class="bus-info"><strong>Shift:</strong> Evening</div>
+        <div class="bus-info"><strong>Departure:</strong> 5:30 PM</div>
+        <div class="bus-info"><strong>Arrival:</strong> 10:00 PM</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 BusFleetPro. All rights reserved.
+  </footer>
+</body>
+</html>

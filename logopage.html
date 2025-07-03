@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <div class="div">
+        <div class="overlap-group"><div class="text-wrapper">bus.in</div></div>
+        <img class="arrow" src="https://c.animaapp.com/mcklv5wpBHzOfB/img/arrow-1.svg" />
+        <img class="img" src="https://c.animaapp.com/mcklv5wpBHzOfB/img/arrow-2.svg" />
+        <div class="overlap">
+          <div class="rectangle"></div>
+          <div class="text-wrapper-2">Get started</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  .logo {
+  background-color: #fff01f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
 
+.logo .div {
+  background-color: var(--yellow-theme);
+  width: 412px;
+  height: 917px;
+  position: relative;
+}
+
+.logo .overlap-group {
+  width: 222px;
+  height: 233px;
+  top: 342px;
+  background-color: #000000;
+  border-radius: 111px / 116.5px;
+  position: absolute;
+  left: 95px;
+}
+
+.logo .text-wrapper {
+  position: absolute;
+  top: 73px;
+  left: 44px;
+  -webkit-text-stroke: 1px #000000;
+  font-family: "Jockey One", Helvetica;
+  font-weight: 400;
+  color: var(--yellow-theme);
+  font-size: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.logo .arrow {
+  position: absolute;
+  width: 150px;
+  height: 82px;
+  top: 585px;
+  left: 136px;
+}
+
+.logo .img {
+  position: absolute;
+  width: 158px;
+  height: 74px;
+  top: 268px;
+  left: 125px;
+}
+
+.logo .overlap {
+  width: 231px;
+  height: 66px;
+  top: 715px;
+  position: absolute;
+  left: 95px;
+}
+
+.logo .rectangle {
+  position: absolute;
+  width: 222px;
+  height: 66px;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px #ff9a01;
+}
+
+.logo .text-wrapper-2 {
+  position: absolute;
+  width: 207px;
+  top: 3px;
+  left: 24px;
+  font-family: "Jockey One", Helvetica;
+  font-weight: 400;
+  color: var(--yellow-theme);
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+:root {
+  --yellow-theme: rgba(255, 240, 31, 1);
+}
+</style>

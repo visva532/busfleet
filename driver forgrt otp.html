@@ -1,0 +1,127 @@
+<section id="otp-verification">
+    <div class="otp-container">
+      <h1 class="otp-title">Enter OTP</h1>
+      <form class="otp-form">
+        <div class="otp-input-fields">
+          <input type="text" class="otp-input" maxlength="1" aria-label="first digit">
+          <input type="text" class="otp-input" maxlength="1" aria-label="second digit">
+          <input type="text" class="otp-input" maxlength="1" aria-label="third digit">
+          <input type="text" class="otp-input" maxlength="1" aria-label="fourth digit">
+        </div>
+        <button type="submit" class="submit-button">Enter</button>
+      </form>
+    </div>
+  </section>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background-color: 83D8EB;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* CSS from section:otp */
+.otp-container {
+    max-width: 412px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .otp-title {
+    font-family: 'Poppins', sans-serif; /* Based on textStyle_5 */
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.4;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    margin-top: 81px; /* Adjusted from 101px for better visual balance */
+    margin-bottom: 41px;
+    text-align: center;
+  }
+
+  .otp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .otp-input-fields {
+    display: flex;
+    justify-content: center;
+    gap: 46px; /* Based on spacing between inputs */
+    margin-bottom: 138px;
+  }
+
+  .otp-input {
+    width: 52px;
+    height: 52px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .otp-input:focus {
+    outline: 2px solid #aac3bb;
+    box-shadow: 0 0 5px rgba(170, 195, 187, 0.7);
+  }
+
+  .submit-button {
+    width: 150px;
+    height: 70px;
+    background-color: #aac3bb;
+    border-radius: 10px;
+    border: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 412px) {
+    .otp-title {
+      font-size: 10vw;
+      margin-top: 20vh;
+    }
+    .otp-input-fields {
+      gap: 20px;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+    .otp-input {
+      width: 15vw;
+      height: 15vw;
+      max-width: 52px;
+      max-height: 52px;
+      font-size: 6vw;
+    }
+    .submit-button {
+      width: 40vw;
+      height: 18vw;
+      max-width: 150px;
+      max-height: 70px;
+      font-size: 8vw;
+    }
+  }
+  </style>

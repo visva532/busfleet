@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driver Home | Bus Fleet Management</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .welcome-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .welcome-card h2 {
+      margin-bottom: 15px;
+      color: #003366;
+    }
+
+    .dashboard-buttons {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .dashboard-buttons a {
+      padding: 10px 20px;
+      background-color: #0055a5;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .dashboard-buttons a:hover {
+      background-color: #003f7d;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .dashboard-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">BusFleetPro</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">My Trips</a>
+      <a href="#">Schedule</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="welcome-card">
+      <h2>Welcome, Driver John!</h2>
+      <p>You are logged in to the Bus Fleet Management System. Use the options below to manage your schedule and trips.</p>
+
+      <div class="dashboard-buttons">
+        <a href="#">View Assigned Buses</a>
+        <a href="#">Today's Route</a>
+        <a href="#">Trip History</a>
+        <a href="#">Profile Settings</a>
+      </div>
+    </div>
+  </div>
+
+ 
+</body>
+</html>

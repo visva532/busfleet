@@ -1,0 +1,274 @@
+<section id="section-login">
+    <div class="login-page-container">
+      <header class="login-header">
+        <a href="#" aria-label="Go back">
+          <img src="/page/62b807d9-a6d6-47e2-b049-c9861f3f3688/images/10_328.svg" alt="Back arrow" class="back-arrow-icon">
+        </a>
+      </header>
+  
+      <main class="login-main">
+        <h1 class="login-title">Login</h1>
+        <div class="login-form-wrapper">
+          <form class="login-form" onsubmit="return false;">
+            <div class="form-group">
+              <label for="username" class="form-label">User name :</label>
+              <input type="text" id="username" class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="password" class="form-label">Password :</label>
+              <input type="password" id="password" class="form-input">
+            </div>
+            <!--merged image-->
+            <div class="submit-button-container">
+              <img src="/page/62b807d9-a6d6-47e2-b049-c9861f3f3688/images/10_324.svg" alt="" class="submit-button-bg">
+              <button type="submit" class="submit-button">
+                <span class="submit-button-text">login</span>
+              </button>
+            </div>
+          </form>
+          <div class="form-links">
+            <p class="register-prompt">register now ? <a href="#">click here</a></p>
+            <a href="#" class="forgot-password-link">Forget password ?</a>
+          </div>
+        </div>
+      </main>
+  
+      <footer class="login-footer">
+        <img src="/page/62b807d9-a6d6-47e2-b049-c9861f3f3688/images/18fdbcddfa3f932adec3d78b1a5ada4ef82882d5.png" alt="Bus illustration" class="bus-illustration">
+      </footer>
+    </div>
+  </section>
+  <style>
+    :root {
+  --primary-yellow: #fff01f;
+  --primary-orange: #ff9b01;
+  --text-color: #000000;
+  --white: #fefefe;
+  --border-color: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary-yellow);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--text-color);
+}
+
+/* CSS from section:login */
+.login-page-container {
+    max-width: 412px;
+    min-height: 917px;
+    margin: 0 auto;
+    background-color: var(--primary-yellow);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .login-header {
+    padding: 84px 0 0 26px;
+    /* y: 5264 - 5180 = 84px */
+    /* x: 2231 - 2205 = 26px */
+  }
+
+  .back-arrow-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .login-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 26px;
+  }
+
+  .login-title {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+    margin: 0;
+    align-self: flex-start;
+    margin-top: 109px; /* (5469 - (5264 + 42)) = 163px, adjusted for flow */
+    margin-left: 5px; /* 2236 - 2205 - 26 = 5px */
+  }
+
+  .login-form-wrapper {
+    background-image: url("/page/62b807d9-a6d6-47e2-b049-c9861f3f3688/images/10_317.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 359px;
+    height: 204px;
+    margin-top: 60px; /* 5529 - 5469 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 12px; /* Top: 5544-5529=15, Left: 2243-2231=12 */
+  }
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 34px; /* 5590 - 5556 */
+  }
+
+  .form-label {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    white-space: nowrap;
+  }
+
+  .form-input {
+    width: 177px;
+    height: 21px; /* 17px height + 2*2px border */
+    background-color: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: 2px;
+    padding: 0;
+  }
+  
+  .form-group:nth-child(2) .form-input {
+    height: 22px; /* 18px height + 2*2px border */
+  }
+
+  .submit-button-container {
+    position: relative;
+    width: 93px;
+    height: 31px;
+    margin-top: 25px; /* 5633 - (5590 + 18) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .submit-button-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .submit-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
+  .submit-button-text {
+    color: var(--text-color);
+    font-family: 'Jockey One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33.55px;
+    transform: rotate(-1.03deg);
+    display: block;
+  }
+
+  .form-links {
+    margin-top: 20px; /* 5684 - (5633 + 31) */
+    text-align: center;
+  }
+
+  .register-prompt {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    margin: 0 0 4px 0; /* 5703 - 5684 - 15 = 4px approx */
+  }
+
+  .forgot-password-link {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 13.5px;
+  }
+
+  .login-footer {
+    position: absolute;
+    bottom: -1px; /* Visual adjustment */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 511px;
+    max-width: 124%; /* 511/412 */
+    height: 139px;
+    background-color: var(--primary-orange);
+    border-radius: 40px 40px 0 0;
+  }
+
+  .bus-illustration {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left: 70px; /* 2205 - 2135 */
+    top: 9px; /* 5967 - 5958 */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 412px) {
+    .login-page-container {
+      min-height: 100vh;
+    }
+    .login-main {
+      padding: 0 15px;
+    }
+    .login-form-wrapper {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+    .form-group {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    .form-input {
+      width: 100%;
+      margin-top: 4px;
+    }
+    .login-footer {
+      position: relative;
+      margin-top: auto;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 20px 20px 0 0;
+    }
+    .bus-illustration {
+      left: 20px;
+      top: -20px;
+    }
+  }
+  </style>

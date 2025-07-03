@@ -3,208 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Desktop Profile Page</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <title>Passenger Profile | BusFleet</title>
+  <link rel="stylesheet" href="profile.css" />
 </head>
 <body>
-
-  <section id="profile">
+  <section class="profile-section">
     <div class="profile-container">
-      <header class="profile-header" aria-label="Profile navigation">
-        <a href="#" aria-label="Go back">
-          <img src="images/10_1350.svg" alt="Back arrow" class="icon-back">
-        </a>
-        <a href="#" aria-label="Bus information">
-          <img src="images/bus_icon.png" alt="Bus stop icon" class="icon-bus">
-        </a>
-      </header>
-
-      <div class="profile-avatar">
-        <img src="images/10_1337.svg" alt="User avatar">
+      <div class="profile-header">
+        <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic" />
+        <h2 class="profile-name">John Doe</h2>
+        <p class="profile-email">johndoe@example.com</p>
       </div>
 
-      <form class="profile-form" onsubmit="return false;">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <div class="input-wrapper">
-            <input type="text" id="name" class="input-field input-name" value="siva" readonly>
-          </div>
-        </div>
+      <form class="profile-form">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" value="John Doe" required />
 
-        <div class="form-group">
-          <label for="user-id">User ID</label>
-          <div class="input-wrapper">
-            <input type="text" id="user-id" class="input-field input-userid" value="siva@4" readonly>
-          </div>
-        </div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="johndoe@example.com" required />
 
-        <div class="form-group">
-          <label for="phone">Phone no</label>
-          <div class="input-wrapper">
-            <input type="tel" id="phone" class="input-field input-phone" value="46338757" readonly>
-          </div>
-        </div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" value="+91 9876543210" required />
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter address">123 Main Street, Cityname</textarea>
+
+        <button type="submit">Update Profile</button>
       </form>
-
-      <div class="profile-actions">
-        <button type="button" class="btn btn-logout">Logout</button>
-        <button type="button" class="btn btn-add-account">Add Account</button>
-      </div>
     </div>
   </section>
-
 </body>
 </html>
 <style>
-    body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f0f0f0;
+    :root {
+  --primary-color: #005a9c;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --input-bg: #ffffff;
+  --border-color: #ccc;
+  --profile-bg: #ffffff;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-section {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
 }
 
 .profile-container {
-  background-color: #ffb90a;
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--profile-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
 .profile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 30px;
 }
 
-.icon-back {
-  width: 42px;
-  height: 42px;
-}
-
-.icon-bus {
-  width: 80px;
-  height: 80px;
-  transform: rotate(-0.34deg);
-}
-
-.profile-avatar {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.profile-avatar img {
-  width: 200px;
-  height: 230px;
-  border-radius: 20px;
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   object-fit: cover;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 20px;
+  margin: 5px 0;
+  color: var(--primary-color);
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #666;
 }
 
 .profile-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
+  text-align: left;
 }
 
 .profile-form label {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #000;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
 }
 
-.input-wrapper {
-  height: 50px;
-}
-
-.input-field {
+.profile-form input,
+.profile-form textarea {
   width: 100%;
-  height: 100%;
-  background-color: #ffffff;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  font-size: 14px;
+}
+
+.profile-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
   border: none;
-  border-radius: 10px;
-  padding: 0 18px;
-  font-size: 20px;
-  font-weight: 400;
-  color: #000000;
-}
-
-.input-name {
-  font-size: 28px;
-  font-weight: 300;
-}
-
-.input-userid {
-  font-size: 26px;
-}
-
-.input-phone {
-  font-size: 24px;
-}
-
-.profile-actions {
-  margin-top: 40px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-}
-
-.btn {
-  border: 2px solid #000000;
-  border-radius: 10px;
-  padding: 12px 24px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
-  color: #000000;
   transition: background-color 0.3s ease;
 }
 
-.btn-logout {
-  background-color: #fff;
-  font-size: 20px;
+.profile-form button:hover {
+  background-color: #00457c;
 }
 
-.btn-add-account {
-  background-color: #fff;
-  font-size: 18px;
-}
-
-.btn:hover {
-  background-color: #ffe08a;
-}
-
-@media (max-width: 768px) {
+/* Responsive */
+@media screen and (max-width: 480px) {
   .profile-container {
     padding: 20px;
   }
 
-  .profile-form label {
-    font-size: 20px;
-  }
-
-  .input-name,
-  .input-userid,
-  .input-phone {
-    font-size: 22px;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 10px 16px;
+  .profile-name {
+    font-size: 18px;
   }
 }
 

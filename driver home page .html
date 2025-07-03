@@ -28,7 +28,7 @@
       flex-wrap: wrap;
     }
 
-    header .logo {
+    .logo {
       font-size: 1.5rem;
       font-weight: bold;
     }
@@ -50,14 +50,15 @@
       margin: auto;
     }
 
-    .welcome-card {
+    .card {
       background-color: white;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
     }
 
-    .welcome-card h2 {
+    .card h2 {
       margin-bottom: 15px;
       color: #003366;
     }
@@ -82,22 +83,13 @@
       background-color: #003f7d;
     }
 
-    .fuel-status {
-      margin-top: 30px;
-      background-color: #f0f8ff;
-      border-left: 6px solid #0055a5;
-      padding: 20px;
-      border-radius: 8px;
+    .info-section {
+      margin-top: 20px;
     }
 
-    .fuel-status h3 {
-      color: #0055a5;
+    .info-section h3 {
       margin-bottom: 10px;
-    }
-
-    .fuel-status p {
-      font-size: 1rem;
-      margin-bottom: 5px;
+      color: #0055a5;
     }
 
     .fuel-bar {
@@ -105,16 +97,21 @@
       border-radius: 5px;
       overflow: hidden;
       height: 20px;
-      margin-top: 5px;
+      width: 100%;
     }
 
     .fuel-fill {
       height: 100%;
       background-color: #28a745;
-      width: 68%; /* Simulate current fuel percentage */
-      text-align: center;
+      width: 75%; /* current fuel level */
       color: white;
-      font-size: 0.8rem;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style: disc;
     }
 
     footer {
@@ -154,7 +151,9 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <div class="welcome-card">
+
+    <!-- Welcome Card -->
+    <div class="card">
       <h2>Welcome, Driver John!</h2>
       <p>You are logged in to the Bus Fleet Management System. Use the options below to manage your schedule and trips.</p>
 
@@ -164,17 +163,50 @@
         <a href="#">Trip History</a>
         <a href="#">Profile Settings</a>
       </div>
+    </div>
 
-      <!-- Fuel Status Section -->
-      <div class="fuel-status">
-        <h3>Current Bus Fuel Level</h3>
-        <p><strong>Bus Number:</strong> TN07GH1122</p>
-        <p><strong>Fuel Available:</strong> 68%</p>
-        <div class="fuel-bar">
-          <div class="fuel-fill">68%</div>
-        </div>
+    <!-- Fuel Info -->
+    <div class="card">
+      <h2>Current Bus Fuel Info</h2>
+      <p><strong>Bus Number:</strong> TN07GH1122</p>
+      <p><strong>Available Fuel:</strong> 75%</p>
+      <div class="fuel-bar">
+        <div class="fuel-fill">75%</div>
       </div>
     </div>
+
+    <!-- Shift & Route Info -->
+    <div class="card">
+      <h2>Shift & Route Details</h2>
+
+      <!-- Today -->
+      <div class="info-section">
+        <h3>Today's Shift (July 3, 2025)</h3>
+        <p><strong>Shift Time:</strong> 6:00 AM – 12:00 PM</p>
+        <p><strong>Route:</strong> Chennai to Trichy</p>
+        <p><strong>Stops:</strong></p>
+        <ul>
+          <li>Chennai Central</li>
+          <li>Kanchipuram</li>
+          <li>Villupuram</li>
+          <li>Trichy Bus Stand</li>
+        </ul>
+      </div>
+
+      <!-- Tomorrow -->
+      <div class="info-section">
+        <h3>Tomorrow's Shift (July 4, 2025)</h3>
+        <p><strong>Shift Time:</strong> 3:00 PM – 9:00 PM</p>
+        <p><strong>Route:</strong> Trichy to Salem</p>
+        <p><strong>Stops:</strong></p>
+        <ul>
+          <li>Trichy Bus Stand</li>
+          <li>Namakkal</li>
+          <li>Salem New Bus Stand</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 
   <!-- Footer -->

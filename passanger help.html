@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help & Support | BusFleet</title>
+  <link rel="stylesheet" href="help.css" />
+</head>
+<body>
+  <section class="help-section">
+    <div class="help-container">
+      <h1>Need Help?</h1>
+      <p>If you have any questions, feel free to reach out to us.</p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> support@busfleet.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+      </div>
+
+      <form class="help-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
+<style>
+    :root {
+  --primary-color: #005a9c;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --input-bg: #ffffff;
+  --border-color: #ccc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.help-section {
+  width: 100%;
+  max-width: 500px;
+}
+
+.help-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  background-color: #eaf3fb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+}
+
+.help-form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.help-form input,
+.help-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  font-size: 14px;
+}
+
+.help-form textarea {
+  resize: vertical;
+}
+
+.help-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.help-form button:hover {
+  background-color: #00457c;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .help-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+</style>

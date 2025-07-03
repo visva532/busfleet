@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Buses | BusFleet</title>
+  <link rel="stylesheet" href="search-bus.css" />
+</head>
+<body>
+  <section class="search-page">
+    <div class="search-container">
+      <h1>Search Buses</h1>
+      <div class="search-form">
+        <input type="text" placeholder="Departure City" />
+        <input type="text" placeholder="Arrival City" />
+        <input type="date" />
+        <input type="time" />
+        <button class="search-btn">Search</button>
+      </div>
+
+      <div class="map-box">
+        <p>🗺️ Map feature will be displayed here.</p>
+      </div>
+
+      <div class="bus-list">
+        <!-- Bus Card 1 -->
+        <div class="bus-card">
+          <div class="bus-info">
+            <h2>Bus #TN09AB1234 (AC)</h2>
+            <p class="rating">⭐ 4.5 (180 ratings)</p>
+            <p>Departure: 08:00 AM | Arrival: 01:30 PM</p>
+            <p><strong>Price:</strong> ₹550 per seat</p>
+          </div>
+          <div class="bus-actions">
+            <p>📍 Live GPS</p>
+            <button class="seat-btn">View Seats</button>
+          </div>
+        </div>
+
+        <!-- Bus Card 2 -->
+        <div class="bus-card">
+          <div class="bus-info">
+            <h2>Bus #TN10CD5678 (Non-AC)</h2>
+            <p class="rating">⭐ 4.1 (140 ratings)</p>
+            <p>Departure: 09:15 AM | Arrival: 02:45 PM</p>
+            <p><strong>Price:</strong> ₹400 per seat</p>
+          </div>
+          <div class="bus-actions">
+            <p>📍 Live GPS</p>
+            <button class="seat-btn">View Seats</button>
+          </div>
+        </div>
+
+        <!-- Bus Card 3 -->
+        <div class="bus-card">
+          <div class="bus-info">
+            <h2>Bus #TN11EF9012 (AC)</h2>
+            <p class="rating">⭐ 4.8 (220 ratings)</p>
+            <p>Departure: 10:30 AM | Arrival: 04:00 PM</p>
+            <p><strong>Price:</strong> ₹600 per seat</p>
+          </div>
+          <div class="bus-actions">
+            <p>📍 Live GPS</p>
+            <button class="seat-btn">View Seats</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<style>
+    :root {
+  --primary: #005a9c;
+  --bg: #f6f9fc;
+  --card-bg: #ffffff;
+  --text: #333;
+  --border: #e0e0e0;
+  --accent: #009688;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.search-page {
+  max-width: 960px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-form input,
+.search-btn {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.search-form input {
+  flex: 1 1 180px;
+}
+
+.search-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #00457c;
+}
+
+.map-box {
+  background-color: #e6f0ff;
+  border: 1px dashed var(--primary);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.bus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bus-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px var(--shadow);
+  flex-wrap: wrap;
+}
+
+.bus-info {
+  flex: 1 1 60%;
+}
+
+.bus-info h2 {
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.bus-info .rating {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.bus-info p {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.bus-actions {
+  flex: 1 1 30%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bus-actions p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.seat-btn {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seat-btn:hover {
+  background-color: #00796b;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .bus-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bus-actions {
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+}
+
+</style>

@@ -1,0 +1,200 @@
+<section id="login" class="login-section">
+  <div class="login-container">
+    <header class="login-header">
+      <a href="#" aria-label="Go back">
+        <img src="/page/1eef0acf-3e28-4832-9726-435564a37d4d/images/10_361.svg" alt="Back arrow" class="back-arrow">
+      </a>
+    </header>
+    <main class="login-main">
+      <h1 class="login-title">Admin login</h1>
+      <div class="form-wrapper">
+        <img src="/page/1eef0acf-3e28-4832-9726-435564a37d4d/images/10_351.svg" alt="" class="form-background-decoration">
+        <form class="login-form">
+          <div class="form-group">
+            <label for="username">user name :</label>
+            <input type="text" id="username" name="username" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="password">Password :</label>
+            <input type="password" id="password" name="password" class="form-input">
+          </div>
+          <!--merged image-->
+          <div class="button-container">
+            <img src="/page/1eef0acf-3e28-4832-9726-435564a37d4d/images/10_359.svg" alt="" class="button-bg">
+            <button type="submit" class="login-button">login</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+</section>
+<section id="footer" class="footer-section">
+  <div class="footer-background">
+    <img src="/page/1eef0acf-3e28-4832-9726-435564a37d4d/images/18fdbcddfa3f932adec3d78b1a5ada4ef82882d5.png" alt="Bus illustration" class="bus-image">
+  </div>
+</section>
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Jockey One', sans-serif;
+  background-color: #fff01f;
+}
+
+.page-container {
+  max-width: 412px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff01f;
+  overflow: hidden;
+}
+
+/* CSS from section:login */
+.login-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 26px;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .login-header {
+    padding-top: 68px;
+    padding-bottom: 111px;
+  }
+
+  .back-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .login-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-title {
+    font-size: 36px;
+    line-height: 1.4;
+    color: #000000;
+    margin: 0 0 10px;
+    align-self: flex-start;
+    padding-left: 5px;
+  }
+
+  .form-wrapper {
+    position: relative;
+    width: 359px;
+    height: 204px;
+  }
+
+  .form-background-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .login-form {
+    position: relative;
+    z-index: 2;
+    padding: 10px 11px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 26px;
+  }
+
+  .form-group label {
+    font-size: 24px;
+    line-height: 1.4;
+    color: #000000;
+    flex-shrink: 0;
+    width: 102px;
+  }
+
+  .form-input {
+    flex-grow: 1;
+    height: 21px;
+    background-color: #fefefe;
+    border: 2px solid #000000;
+    border-radius: 2px;
+  }
+
+  .button-container {
+    position: relative;
+    width: 93px;
+    height: 38px;
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .button-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .login-button {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    font-family: 'Jockey One', sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    transform: rotate(-1.03deg);
+    padding: 0;
+  }
+
+/* CSS from section:footer */
+.footer-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-background {
+    position: relative;
+    background-color: #ff9b01;
+    border-radius: 40px 40px 0 0;
+    height: 139px;
+    width: 511px;
+    /* Allow the element to be wider than its container */
+    max-width: none; 
+    margin-left: -49.5px; /* (511-412)/2 */
+    margin-right: -49.5px; /* (511-412)/2 */
+  }
+
+  .bus-image {
+    position: absolute;
+    bottom: 0;
+    left: 49.5px; /* Align with the main container's edge */
+    width: 130px;
+    height: 130px;
+  }
+</style>

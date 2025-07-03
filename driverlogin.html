@@ -1,195 +1,119 @@
-<section id="login-page" class="login-page-wrapper">
-  <header class="page-header">
-    <a href="#" aria-label="Go back">
-      <img src="/page/805a6fb4-ee9b-480b-9bab-16e869977331/images/10_313.svg" alt="Back arrow" class="back-icon">
-    </a>
-  </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passenger Login - BusFleet Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <main class="login-content">
-    <div class="login-card">
-      <h1 class="login-title">login</h1>
-      <form class="login-form" action="#" method="post">
-        <div class="form-group">
-          <label for="username" class="form-label">user name :</label>
-          <input type="text" id="username" name="username" class="form-input">
-        </div>
-        <div class="form-group">
-          <label for="password" class="form-label">Password :</label>
-          <input type="password" id="password" name="password" class="form-input">
-        </div>
-        <a href="#" class="forgot-password-link">Forget password ?</a>
-        <button type="submit" class="login-button">
-          <span class="login-button-text">login</span>
-        </button>
-        <p class="register-prompt">
-          register now ? <a href="#" class="register-link">click here</a>
-        </p>
-      </form>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #2980b9, #6dd5fa);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login-container input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .login-container .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #2980b9;
+    }
+
+    .login-container .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .login-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Driver Login</h2>
+    <form action="#" method="POST">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="remember" name="remember" />
+        <label for="remember">Remember me</label>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+    <div class="footer">
+      <p>Don't have an account? <a href="#">Sign up</a></p>
     </div>
-  </main>
+  </div>
+</body>
+</html>
 
-  <footer class="page-footer">
-    <img src="/page/805a6fb4-ee9b-480b-9bab-16e869977331/images/18fdbcddfa3f932adec3d78b1a5ada4ef82882d5.png" alt="Bus illustration" class="bus-image">
-  </footer>
-</section>
-<style>
-    html, body {
-  height: 100%;
-  margin: 0;
-}
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #83d8eb;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* CSS from section:login-page */
-.login-page-wrapper {
-    max-width: 412px;
-    width: 100%;
-    min-height: 917px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #83d8eb;
-    overflow: hidden;
-  }
-
-  .page-header {
-    padding-top: 95px;
-    padding-left: 24px;
-  }
-
-  .back-icon {
-    width: 42px;
-    height: 42px;
-  }
-
-  .login-content {
-    margin-top: 135px;
-    padding: 0 26px;
-    z-index: 1;
-  }
-
-  .login-card {
-    background-color: #FFFFFF;
-    border-radius: 30px;
-    padding: 17px 24px 30px;
-  }
-
-  .login-title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 54px;
-    color: #000000;
-    margin: 0 0 25px 0;
-  }
-
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .form-label {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    color: #000000;
-    margin-right: 8px;
-    flex-shrink: 0;
-  }
-
-  .form-input {
-    flex-grow: 1;
-    height: 34px;
-    background-color: #fefefe;
-    border: 2px solid #000000;
-    border-radius: 2px;
-  }
-
-  .forgot-password-link {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 15px;
-    color: #000000;
-    text-decoration: none;
-    align-self: flex-end;
-    margin-bottom: 10px;
-    margin-right: 2px; /* Fine-tuning alignment */
-  }
-
-  .login-button {
-    width: 93px;
-    height: 31px;
-    background-color: #EAEAEA; /* Approximated from image */
-    border: 3px solid #000000;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    margin-bottom: 17px;
-  }
-
-  .login-button-text {
-    font-family: 'Jockey One', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 33.55px;
-    color: #000000;
-    transform: rotate(-1.03deg);
-  }
-
-  .register-prompt {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 11px;
-    line-height: 16.5px;
-    color: #000000;
-    text-align: center;
-    margin: 0;
-  }
-
-  .register-link {
-    font-weight: 700;
-    color: #000000;
-    text-decoration: underline;
-  }
-
-  .page-footer {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 511px;
-    height: 139px;
-    background-color: #fffbf4;
-    border-radius: 40px 40px 0 0;
-  }
-
-  .bus-image {
-    position: absolute;
-    left: 70px;
-    top: 9px;
-    width: 130px;
-    height: 130px;
-  }
-</style>

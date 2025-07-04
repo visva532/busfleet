@@ -1,156 +1,97 @@
-<section id="agencies">
-  <div class="agencies-container">
-    <header class="agencies-header">
-      <a href="#" aria-label="Go back">
-        <img src="/page/f57e036b-9b9d-4ab2-a59e-bb3da815d94d/images/10_1983.svg" alt="Back arrow" class="back-icon">
-      </a>
-    </header>
-    <main class="agencies-list">
-      <div class="agency-item">
-        <img src="/page/f57e036b-9b9d-4ab2-a59e-bb3da815d94d/images/f2832107338ca508fc1acedc7fd8d90376594259.png" alt="Bus icon" class="agency-icon">
-        <h2 class="agency-name">Shanu travels</h2>
-      </div>
-      <div class="agency-item">
-        <img src="/page/f57e036b-9b9d-4ab2-a59e-bb3da815d94d/images/f2832107338ca508fc1acedc7fd8d90376594259.png" alt="Bus icon" class="agency-icon">
-        <h2 class="agency-name">Sarath travels</h2>
-      </div>
-      <div class="agency-item">
-        <img src="/page/f57e036b-9b9d-4ab2-a59e-bb3da815d94d/images/f2832107338ca508fc1acedc7fd8d90376594259.png" alt="Bus icon" class="agency-icon">
-        <h2 class="agency-name">Naveen travels</h2>
-      </div>
-    </main>
-  </div>
-</section>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Privacy - Change Password</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-  margin: 0;
-  font-family: 'Jockey One', sans-serif;
-  background-color: #a9d4dd;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* CSS from section:profile */
-.profile-container {
-    width: 100%;
-    max-width: 412px;
-    min-height: 917px;
-    background-color: #a9d4dd;
-    padding: 64px 28px 40px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .profile-header {
-    width: 100%;
-  }
-
-  .back-icon {
-    width: 42px;
-    height: 42px;
-  }
-
-  .profile-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .profile-avatar {
-    width: 191px;
-    height: 219px;
-    margin-bottom: 63px;
-  }
-
-  .profile-form {
-    width: 100%;
-    max-width: 348px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group:not(:last-of-type) {
-      margin-bottom: 22px;
-  }
-
-  .form-group label {
-    color: #000000;
-    font-size: 32px;
-    line-height: 1.4;
-    margin-bottom: 10px;
-  }
-  
-  .form-group:nth-of-type(1) label { margin-bottom: 29px; }
-  .form-group:nth-of-type(2) label { margin-bottom: 12px; }
-  .form-group:nth-of-type(3) label { margin-bottom: 12px; }
-  .form-group:nth-of-type(4) label { margin-bottom: 6px; }
-
-
-  .form-value-display {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 0 13px;
-    min-height: 46px;
-    display: flex;
-    align-items: center;
-    font-size: 36px;
-    line-height: 1.4;
-  }
-
-  #name {
-    color: #232323;
-  }
-
-  #language {
-    color: #000000;
-  }
-
-  #licence {
-    color: #000000;
-    font-size: 29px;
-  }
-
-  #gmail {
-    color: #000000;
-  }
-
-  .logout-button {
-    align-self: center;
-    margin-top: 10px;
-    background-color: #64656c;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    color: #fdf6f6;
-    font-family: 'Jockey One', sans-serif;
-    font-size: 24px;
-    padding: 4px 16px;
-    cursor: pointer;
-    width: 95px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media (max-width: 480px) {
-    body {
+      margin: 0;
       padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    .profile-container {
-      max-width: 100%;
-      min-height: 100vh;
-      padding: 40px 20px;
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-  }
-</style>
+
+    h2 {
+      text-align: center;
+      color: #0d47a1;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+        border-radius: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Admin Password Change</h2>
+    <form action="#" method="post">
+      <label for="currentPassword">Current Password</label>
+      <input type="password" id="currentPassword" name="currentPassword" required>
+
+      <label for="newPassword">New Password</label>
+      <input type="password" id="newPassword" name="newPassword" required>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+      <button type="submit">Change Password</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,195 +1,97 @@
-<section id="settings-page">
-  <div class="settings-container">
-    <header class="settings-header">
-      <a href="#" aria-label="Go back">
-        <img src="/page/95c457a1-dbfd-4f61-8520-a2a5558e173c/images/10_1148.svg" alt="Back" class="back-icon">
-      </a>
-      <div class="title-wrapper">
-        <img src="/page/95c457a1-dbfd-4f61-8520-a2a5558e173c/images/10_1137.svg" alt="" class="title-background">
-        <h1 class="title-text">Bus.in settings</h1>
-      </div>
-    </header>
-
-    <nav class="settings-nav">
-      <ul>
-        <li>
-          <a href="#">
-            <img src="/page/95c457a1-dbfd-4f61-8520-a2a5558e173c/images/10_1142.svg" alt="" class="nav-icon chevron-icon">
-            <img src="/page/95c457a1-dbfd-4f61-8520-a2a5558e173c/images/10_1143.svg" alt="" class="nav-icon">
-            <span class="nav-text">Password & security</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="/page/95c457a1-dbfd-4f61-8520-a2a5558e173c/images/10_1144.svg" alt="" class="nav-icon chevron-icon">
-            <img src="/page/95c457a1-dbfd-4f61-8520-a2a5558e173c/images/10_1147.svg" alt="" class="nav-icon">
-            <span class="nav-text">About Us</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="/page/95c457a1-dbfd-4f61-8520-a2a5558e173c/images/10_1145.svg" alt="" class="nav-icon chevron-icon">
-            <img src="/page/95c457a1-dbfd-4f61-8520-a2a5558e173c/images/10_1146.svg" alt="" class="nav-icon">
-            <span class="nav-text">Logout</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</section>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin settings | BusFleet Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
     :root {
-  --background-color: #a9d4dd;
-  --header-bg-color: #8FB0B8; /* Approximated from image */
-  --card-bg-color: #fffbfb;
-  --footer-bg-color: #fffefe;
-  --text-color: #000000;
-  --header-height: 111px;
-  --footer-height: 63px;
-}
+      --primary-color: #004080;
+      --accent-color: #007acc;
+      --bg-color: #f4f6f8;
+      --text-color: #333;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    body {
+      background-color: var(--bg-color);
+      padding: 20px;
+    }
 
-.page-container {
-  max-width: 412px;
-  margin: 0 auto;
-  position: relative;
-  min-height: 100vh;
-  background-color: var(--background-color);
-  padding-top: var(--header-height);
-  padding-bottom: var(--footer-height);
-}
+    .settings-container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-/* CSS from section:header */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 412px;
-  height: var(--header-height);
-  z-index: 100;
-  color: var(--text-color);
-}
+    .settings-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-.header-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  /* The SVG has its own rounded corners */
-}
+    .settings-header h2 {
+      color: var(--primary-color);
+      font-size: 24px;
+    }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  padding: 0 33px;
-}
+    .settings-option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background-color: var(--accent-color);
+      color: white;
+      padding: 15px 20px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
 
-.header-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 1.5; /* 75px */
-  letter-spacing: 2.5px;
-  margin: 0;
-}
+    .settings-option:hover {
+      background-color: #005fa3;
+    }
 
-.menu-button {
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
+    @media (max-width: 600px) {
+      .settings-container {
+        padding: 20px;
+      }
 
-.menu-button img {
-  width: 41px;
-  height: 33px;
-  display: block;
-}
+      .settings-option {
+        font-size: 15px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="settings-container">
+    <div class="settings-header">
+      <h2>Admin settings Settings</h2>
+    </div>
+    <button class="settings-option" onclick="location.href='password-security.html'">🔒 Password & Security</button>
+    <button class="settings-option" onclick="location.href='about.html'">ℹ️ About Us</button>
+    <button class="settings-option" onclick="location.href='contact.html'">📞 Contact Us</button>
+    <button class="settings-option" onclick="logout()">🚪 Logout</button>
+  </div>
 
-/* CSS from section:main */
-.bus-list {
-  padding: 28px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.bus-item {
-  padding-left: 13px; /* Aligns with "Admin" text */
-}
-
-.bus-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 1.5; /* 75px */
-  letter-spacing: 2.5px;
-  margin: 0 0 4px 0;
-}
-
-.bus-card {
-  background-color: var(--card-bg-color);
-  border-radius: 5px;
-  padding: 10px 20px;
-  text-align: center;
-}
-
-.bus-route,
-.bus-time {
-  font-family: 'Poppins', sans-serif;
-  font-size: 25px;
-  font-weight: 600;
-  line-height: 1.5; /* 37.5px */
-  letter-spacing: 1.25px;
-  margin: 0;
-}
-
-/* CSS from section:footer */
-.site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 412px;
-  height: var(--footer-height);
-  background-color: var(--footer-bg-color);
-  z-index: 100;
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  padding: 0 10px;
-}
-
-.nav-link img {
-  display: block;
-  height: 42px;
-  width: auto;
-}
-
-.nav-link .settings-icon {
-  border: 2.31px solid #000001;
-  border-radius: 2px; /* To soften the sharp corners of the border */
-  height: 39px;
-}
-</style>
+  <script>
+    function logout() {
+      // Add actual logout logic here
+      alert("You have been logged out.");
+      location.href = "login.html"; // Redirect to login page
+    }
+  </script>
+</body>
+</html>

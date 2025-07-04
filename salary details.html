@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driver Salary Details</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0d47a1;
+      margin-bottom: 30px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 1000px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0d47a1;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead tr {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      td::before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      td:nth-of-type(1)::before { content: "Driver ID"; }
+      td:nth-of-type(2)::before { content: "Name"; }
+      td:nth-of-type(3)::before { content: "Month"; }
+      td:nth-of-type(4)::before { content: "Base Salary"; }
+      td:nth-of-type(5)::before { content: "Bonus"; }
+      td:nth-of-type(6)::before { content: "Deductions"; }
+      td:nth-of-type(7)::before { content: "Total Salary"; }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Admin – Driver Salary Details</h2>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Driver ID</th>
+          <th>Name</th>
+          <th>Month</th>
+          <th>Base Salary</th>
+          <th>Bonus</th>
+          <th>Deductions</th>
+          <th>Total Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>D001</td>
+          <td>John Smith</td>
+          <td>July 2025</td>
+          <td>$2,000</td>
+          <td>$150</td>
+          <td>$50</td>
+          <td>$2,100</td>
+        </tr>
+        <tr>
+          <td>D002</td>
+          <td>Alice Johnson</td>
+          <td>July 2025</td>
+          <td>$2,200</td>
+          <td>$200</td>
+          <td>$70</td>
+          <td>$2,330</td>
+        </tr>
+        <tr>
+          <td>D003</td>
+          <td>Robert Lee</td>
+          <td>July 2025</td>
+          <td>$1,900</td>
+          <td>$100</td>
+          <td>$20</td>
+          <td>$1,980</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

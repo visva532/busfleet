@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BusFleet - Card Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d47a1;
+      --accent: #ff6f00;
+      --bg: #f0f4f8;
+      --card: #ffffff;
+      --text: #333;
+      --border: #ccc;
+      --radius: 10px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      color: var(--primary);
+    }
+
+    .seat-summary {
+      margin-bottom: 24px;
+      background: #e3f2fd;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .form-row input {
+      flex: 1;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: var(--accent);
+      color: white;
+      padding: 14px;
+      font-size: 17px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #e65c00;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>🚌 BusFleet Payment</h1>
+      <p>Secure Debit Card Checkout</p>
+    </div>
+
+    <div class="seat-summary">
+      <h2>Seat Summary</h2>
+      <p><strong>Selected Seats:</strong> 4A, 4B, 4C</p>
+      <p><strong>Total Fare:</strong> ₹1650</p>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="holder">Card Holder Name</label>
+        <input type="text" id="holder" placeholder="Enter full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="ifsc">IFSC Code</label>
+        <input type="text" id="ifsc" placeholder="e.g., SBIN0001234" required />
+      </div>
+
+      <div class="form-group">
+        <label for="cardnumber">Card Number</label>
+        <input type="text" id="cardnumber" maxlength="19" placeholder="xxxx-xxxx-xxxx-xxxx" required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="password" id="cvv" maxlength="3" placeholder="123" required />
+        </div>
+
+        <div class="form-group">
+          <label for="expiry">Expiry Date</label>
+          <input type="month" id="expiry" required />
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Pay ₹1650</button>
+    </form>
+
+    <div class="footer">
+      <p>&copy; 2025 BusFleet Management. Your payment is secure.</p>
+    </div>
+  </div>
+
+</body>
+</html>

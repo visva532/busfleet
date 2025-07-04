@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BusFleet Seat Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d47a1;
+      --accent: #ff6f00;
+      --bg: #f4f8fc;
+      --card: #ffffff;
+      --text: #333;
+      --border: #ddd;
+      --radius: 10px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+    }
+
+    .booking-form {
+      padding: 24px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .seat-summary {
+      margin-bottom: 24px;
+    }
+
+    .payment-box {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .razorpay-button {
+      background-color: var(--accent);
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .razorpay-button:hover {
+      background-color: #e65c00;
+    }
+
+    .note {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 8px;
+      color: #555;
+    }
+
+    .footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      font-size: 14px;
+      padding: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .razorpay-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🚌 BusFleet Booking</h1>
+      <p>2 Seats Selected – Secure Your Trip</p>
+    </header>
+
+    <form class="booking-form">
+      <section class="seat-summary">
+        <h2>Seat Summary</h2>
+        <p><strong>Selected Seats:</strong> 5A, 5B</p>
+        <p><strong>Total Fare:</strong> ₹1100</p>
+      </section>
+
+      <div class="payment-box">
+        <button type="button" class="razorpay-button" onclick="payWithRazorpay()">Pay ₹1100 with Razorpay</button>
+        <p class="note">Click to proceed with secure Razorpay payment.</p>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <p>&copy; 2025 BusFleet Management</p>
+    </footer>
+  </div>
+
+  <!-- Razorpay Script -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    function payWithRazorpay() {
+      var options = {
+        key: "YOUR_RAZORPAY_KEY", // Replace with your actual key
+        amount: 110000, // 1100 INR in paise
+        currency: "INR",
+        name: "BusFleet Booking",
+        description: "Seat Booking Payment",
+        image: "https://your-logo-url.com/logo.png", // Optional
+        handler: function (response) {
+          alert("Payment Successful. Payment ID: " + response.razorpay_payment_id);
+        },
+        prefill: {
+          name: "Passenger",
+          email: "user@example.com",
+          contact: "9000000000"
+        },
+        theme: {
+          color: "#0d47a1"
+        }
+      };
+
+      var rzp = new Razorpay(options);
+      rzp.open();
+    }
+  </script>
+</body>
+</html>

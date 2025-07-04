@@ -1,113 +1,109 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="logo">
-      <div class="div">
-        <div class="overlap-group"><div class="text-wrapper">bus.in</div></div>
-        <img class="arrow" src="https://c.animaapp.com/mcklv5wpBHzOfB/img/arrow-1.svg" />
-        <img class="img" src="https://c.animaapp.com/mcklv5wpBHzOfB/img/arrow-2.svg" />
-        <div class="overlap">
-          <div class="rectangle"></div>
-          <div class="text-wrapper-2">Get started</div>
-        </div>
-      </div>
-    </div>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BusFleet Management - Start</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo img {
+      width: 70%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+
+    .get-started {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      color: #007bff;
+      border: none;
+      padding: 0.9rem 2rem;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .get-started:hover {
+      background-color: #f1f1f1;
+      transform: translateX(-50%) scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .get-started {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://img.icons8.com/ios-filled/100/007bff/bus.png" alt="Bus Logo">
+  </div>
+
+  <h1>BusFleet Management</h1>
+  <p>Streamlining your transport operations — safer, smarter, and faster.</p>
+
+  <a href="landing page.html" class="get-started">Get Started</a>
+
+</body>
 </html>
-<style>
-  .logo {
-  background-color: #fff01f;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.logo .div {
-  background-color: var(--yellow-theme);
-  width: 412px;
-  height: 917px;
-  position: relative;
-}
-
-.logo .overlap-group {
-  width: 222px;
-  height: 233px;
-  top: 342px;
-  background-color: #000000;
-  border-radius: 111px / 116.5px;
-  position: absolute;
-  left: 95px;
-}
-
-.logo .text-wrapper {
-  position: absolute;
-  top: 73px;
-  left: 44px;
-  -webkit-text-stroke: 1px #000000;
-  font-family: "Jockey One", Helvetica;
-  font-weight: 400;
-  color: var(--yellow-theme);
-  font-size: 60px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.logo .arrow {
-  position: absolute;
-  width: 150px;
-  height: 82px;
-  top: 585px;
-  left: 136px;
-}
-
-.logo .img {
-  position: absolute;
-  width: 158px;
-  height: 74px;
-  top: 268px;
-  left: 125px;
-}
-
-.logo .overlap {
-  width: 231px;
-  height: 66px;
-  top: 715px;
-  position: absolute;
-  left: 95px;
-}
-
-.logo .rectangle {
-  position: absolute;
-  width: 222px;
-  height: 66px;
-  top: 0;
-  left: 0;
-  background-color: #000000;
-  border-radius: 10px;
-  box-shadow: 3px 3px 4px #ff9a01;
-}
-
-.logo .text-wrapper-2 {
-  position: absolute;
-  width: 207px;
-  top: 3px;
-  left: 24px;
-  font-family: "Jockey One", Helvetica;
-  font-weight: 400;
-  color: var(--yellow-theme);
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-:root {
-  --yellow-theme: rgba(255, 240, 31, 1);
-}
-</style>

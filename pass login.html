@@ -47,10 +47,25 @@
     .login-container input[type="password"] {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       border: 1px solid #bdc3c7;
       border-radius: 5px;
       font-size: 16px;
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-bottom: 15px;
+    }
+
+    .forgot-password a {
+      font-size: 14px;
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
     }
 
     .login-container input[type="checkbox"] {
@@ -101,6 +116,10 @@
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
 
       <div class="checkbox-container">
         <input type="checkbox" id="remember" name="remember" />

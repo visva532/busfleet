@@ -1,101 +1,114 @@
-<section id="forgot-password-form">
-  <main class="forgot-password-container">
-    <a href="#" class="back-button">
-      <img src="/page/f7f4c9b8-1fcb-4968-83d9-25e9c72d1cad/images/10_1907.svg" alt="Back Arrow">
-    </a>
-    <form class="form-content">
-      <label for="email" class="email-label">Enter the email</label>
-      <input type="email" id="email" name="email" class="email-input">
-      <button type="submit" class="submit-button">Get OTP</button>
-    </form>
-  </main>
-</section>
-<style>
-    body {
-  margin: 0;
-  background-color: 83D8EB;
-  font-family: 'Poppins', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* CSS from section:form */
-.forgot-password-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 412px;
-    min-height: 100vh;
-    margin: 0 auto;
-    background-color: 83D8EB;
-    padding: 79px 12px 50px; /* Top: 4094-4015=79, Left: 3424-3412=12 */
-  }
-
-  .back-button {
-    align-self: flex-start;
-    margin-left: -4px; /* Aligning with visual spec: 8px from edge, container padding is 12px */
-    margin-bottom: 164px; /* 4300 - (4094 + 42) */
-  }
-
-  .back-button img {
-    width: 42px;
-    height: 42px;
-    display: block;
-  }
-
-  .form-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-
-  .email-label {
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 45px;
-    letter-spacing: 1.5px;
-    margin-bottom: 24px; /* 4369 - (4300 + 45) */
-    align-self: flex-start;
-  }
-
-  .email-input {
-    width: 364px;
-    height: 54px;
-    background-color: #fffafa;
-    border: 1px solid #000000;
-    border-radius: 17px;
-    padding: 0 16px;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    max-width: 100%;
-  }
-
-  .submit-button {
-    width: 203px;
-    height: 56px;
-    background-color: #d2caca;
-    border: 1px solid #000000;
-    border-radius: 17px;
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 45px;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    margin-top: 234px; /* 4657 - (4369 + 54) */
-    padding: 0;
-    text-align: center;
-  }
-
-  @media (max-width: 412px) {
-    .forgot-password-container {
-      padding-left: 12px;
-      padding-right: 12px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forgot Password | BusFleet Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #004080;
+      --accent-color: #007acc;
+      --bg-color: #f4f6f8;
+      --text-color: #333;
     }
-  }
-</style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background-color: #fff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h2 {
+      color: var(--primary-color);
+      font-size: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="email"]:focus {
+      border-color: var(--accent-color);
+      outline: none;
+    }
+
+    .otp-btn {
+      width: 100%;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .otp-btn:hover {
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px;
+      }
+
+      .header h2 {
+        font-size: 20px;
+      }
+
+      .otp-btn {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Forgot Password</h2>
+      <p>Please enter your registered email</p>
+    </div>
+    <form>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <button type="submit" class="otp-btn">Get OTP</button>
+    </form>
+  </div>
+</body>
+</html>

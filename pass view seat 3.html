@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Single Seat Booking | BusFleet</title>
+  <style>
+    :root {
+      --primary: #005a9c;
+      --accent: #28a745;
+      --warning: #ffc107;
+      --gray: #ccc;
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: var(--card);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    h2, h3 {
+      color: var(--primary);
+    }
+
+    .seats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .seat {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+      cursor: not-allowed;
+      color: white;
+      background: var(--gray);
+      transition: background 0.3s ease;
+    }
+
+    .seat.available {
+      background-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .seat.selected {
+      background-color: var(--warning);
+      color: #000;
+    }
+
+    .legend {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .legend-box {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      margin-right: 6px;
+      border-radius: 4px;
+    }
+
+    .legend-box.available {
+      background-color: var(--accent);
+    }
+
+    .legend-box.booked {
+      background-color: var(--gray);
+    }
+
+    .legend-box.selected {
+      background-color: var(--warning);
+    }
+
+    .summary {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .book-btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .book-btn:hover {
+      background-color: #00457c;
+    }
+
+    @media screen and (max-width: 600px) {
+      .seats-grid {
+        grid-template-columns: repeat(3, 50px);
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bus #TN07AB4567 (AC)</h2>
+    <p>⭐ 4.6 (254 reviews)</p>
+
+    <h3>Select One Seat</h3>
+    <div class="seats-grid">
+      <div class="seat booked">1</div>
+      <div class="seat booked">2</div>
+      <div class="seat booked">3</div>
+      <div class="seat available">4</div>
+      <div class="seat available">5</div>
+      <div class="seat booked">6</div>
+      <div class="seat available">7</div>
+      <div class="seat booked">8</div>
+    </div>
+
+    <p class="legend">
+      <span class="legend-box available"></span> Available &nbsp;&nbsp;
+      <span class="legend-box booked"></span> Booked &nbsp;&nbsp;
+      <span class="legend-box selected"></span> Selected
+    </p>
+
+    <div class="summary">
+      <p><strong>Selected Seat:</strong> <span id="selected-seat">None</span></p>
+      <button class="book-btn">Book Now</button>
+    </div>
+  </div>
+
+  <script>
+    const seats = document.querySelectorAll('.seat.available');
+    const selectedSeatText = document.getElementById('selected-seat');
+
+    seats.forEach(seat => {
+      seat.addEventListener('click', () => {
+        // Deselect all seats first
+        seats.forEach(s => s.classList.remove('selected'));
+
+        // Select the clicked seat
+        seat.classList.add('selected');
+        selectedSeatText.textContent = seat.textContent;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Fleet Management - Staff Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .bus-card {
+            background-color: #fff;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .bus-card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+        }
+
+        .bus-info {
+            margin-bottom: 15px;
+        }
+
+        .bus-info h2 {
+            font-size: 1.8rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .bus-info p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .staff-details {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .staff-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .staff-details p {
+            font-size: 1rem;
+            color: #555;
+            margin: 8px 0;
+        }
+
+        .staff-details span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .bus-card {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .bus-info h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Staff Details - Bus Fleet Management</h1>
+
+        <!-- Bus 1 -->
+        <div class="bus-card">
+            <div class="bus-info">
+                <h2>Bus 101</h2>
+                <p>Route: City Center to Airport</p>
+                <p>Capacity: 45 seats</p>
+            </div>
+
+            <div class="staff-details">
+                <h3>Driver 1 Details</h3>
+                <p><span>Name:</span> John Doe</p>
+                <p><span>License Number:</span> AB123456</p>
+                <p><span>Aadhar Number:</span> 1234 5678 9101</p>
+                <p><span>Email:</span> john.doe@example.com</p>
+                <p><span>Phone:</span> +91 9876543210</p>
+                <p><span>Address:</span> 123 Main St, City</p>
+
+                <h3>Driver 2 Details</h3>
+                <p><span>Name:</span> Jane Smith</p>
+                <p><span>License Number:</span> AB654321</p>
+                <p><span>Aadhar Number:</span> 9876 5432 1098</p>
+                <p><span>Email:</span> jane.smith@example.com</p>
+                <p><span>Phone:</span> +91 9123456789</p>
+                <p><span>Address:</span> 456 Another St, City</p>
+
+                <h3>Driver 3 Details</h3>
+                <p><span>Name:</span> Robert Brown</p>
+                <p><span>License Number:</span> AB112233</p>
+                <p><span>Aadhar Number:</span> 5678 1234 5678</p>
+                <p><span>Email:</span> robert.brown@example.com</p>
+                <p><span>Phone:</span> +91 9807654321</p>
+                <p><span>Address:</span> 789 Any Rd, City</p>
+            </div>
+        </div>
+
+        <!-- Bus 2 -->
+        <div class="bus-card">
+            <div class="bus-info">
+                <h2>Bus 102</h2>
+                <p>Route: Downtown to Mall</p>
+                <p>Capacity: 50 seats</p>
+            </div>
+
+            <div class="staff-details">
+                <h3>Driver 1 Details</h3>
+                <p><span>Name:</span> Sarah Green</p>
+                <p><span>License Number:</span> XY987654</p>
+                <p><span>Aadhar Number:</span> 2345 6789 1234</p>
+                <p><span>Email:</span> sarah.green@example.com</p>
+                <p><span>Phone:</span> +91 8234567890</p>
+                <p><span>Address:</span> 101 New St, Downtown</p>
+
+                <h3>Driver 2 Details</h3>
+                <p><span>Name:</span> Mark Lee</p>
+                <p><span>License Number:</span> XY123789</p>
+                <p><span>Aadhar Number:</span> 3456 7890 2345</p>
+                <p><span>Email:</span> mark.lee@example.com</p>
+                <p><span>Phone:</span> +91 8734659023</p>
+                <p><span>Address:</span> 202 Old Rd, Downtown</p>
+
+                <h3>Driver 3 Details</h3>
+                <p><span>Name:</span> Nina Brown</p>
+                <p><span>License Number:</span> XY876543</p>
+                <p><span>Aadhar Number:</span> 1234 5678 3456</p>
+                <p><span>Email:</span> nina.brown@example.com</p>
+                <p><span>Phone:</span> +91 9123456789</p>
+                <p><span>Address:</span> 303 River Rd, Downtown</p>
+            </div>
+        </div>
+
+        <!-- Bus 3 -->
+        <div class="bus-card">
+            <div class="bus-info">
+                <h2>Bus 103</h2>
+                <p>Route: Station to University</p>
+                <p>Capacity: 40 seats</p>
+            </div>
+
+            <div class="staff-details">
+                <h3>Driver 1 Details</h3>
+                <p><span>Name:</span> Michael White</p>
+                <p><span>License Number:</span> ZH112233</p>
+                <p><span>Aadhar Number:</span> 3456 7890 1234</p>
+                <p><span>Email:</span> michael.white@example.com</p>
+                <p><span>Phone:</span> +91 9087654321</p>
+                <p><span>Address:</span> 200 Oak Rd, Station</p>
+
+                <h3>Driver 2 Details</h3>
+                <p><span>Name:</span> James Williams</p>
+                <p><span>License Number:</span> ZH334455</p>
+                <p><span>Aadhar Number:</span> 4567 8901 2345</p>
+                <p><span>Email:</span> james.williams@example.com</p>
+                <p><span>Phone:</span> +91 9898765432</p>
+                <p><span>Address:</span> 101 Maple St, Station</p>
+
+                <h3>Driver 3 Details</h3>
+                <p><span>Name:</span> Emma Davis</p>
+                <p><span>License Number:</span> ZH667788</p>
+                <p><span>Aadhar Number:</span> 5678 9012 3456</p>
+                <p><span>Email:</span> emma.davis@example.com</p>
+                <p><span>Phone:</span> +91 8765432109</p>
+                <p><span>Address:</span> 404 Pine Rd, Station</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bus Ticket Payment Options</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      background: white;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      background: #f0f4f8;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .payment-option:hover {
+      background: #dceeff;
+    }
+
+    .payment-option img {
+      width: 36px;
+      height: 36px;
+      margin-right: 15px;
+    }
+
+    .payment-option span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #34495e;
+    }
+
+    @media (max-width: 500px) {
+      .payment-option {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Select Payment Method</h1>
+
+    <div class="payment-option" onclick="window.location.href='https://pay.google.com/'">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="GPay Logo">
+      <span>Pay with Google Pay</span>
+    </div>
+
+    <div class="payment-option" onclick="window.location.href='https://razorpay.com/'">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Razorpay_logo.svg/512px-Razorpay_logo.svg.png" alt="Razorpay Logo">
+      <span>Pay with Razorpay</span>
+    </div>
+
+    <div class="payment-option" onclick="alert('Please use UPI ID: buspay@upi')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/UPI-Logo-vector.svg/512px-UPI-Logo-vector.svg.png" alt="UPI Logo">
+      <span>Pay via UPI ID: <strong>buspay@upi</strong></span>
+    </div>
+
+    <div class="payment-option" onclick="window.location.href='https://yourdebitcardprocessor.com/'">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Generic_Bank_Card_icon.svg/1024px-Generic_Bank_Card_icon.svg.png" alt="Debit Card">
+      <span>Pay using Debit Card</span>
+    </div>
+  </div>
+
+</body>
+</html>

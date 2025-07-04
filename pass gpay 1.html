@@ -3,142 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BusFleet Seat Booking</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>BusFleet Seat Booking - Google Pay</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0d47a1;
+      --accent: #34a853;
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --text: #333;
+      --border: #ccc;
+      --radius: 12px;
+      --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      color: var(--primary);
+    }
+
+    .summary {
+      background: #e3f2fd;
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+    }
+
+    .summary p {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .gpay-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background-color: black;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .gpay-button img {
+      height: 24px;
+    }
+
+    .gpay-button:hover {
+      background-color: #222;
+    }
+
+    .note {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 20px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .gpay-button {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <div class="container">
-    <header class="header">
-      <h1>🚌 Book Your Seat</h1>
-      <p>BusFleet Management — Secure, Easy & Fast</p>
-    </header>
+    <div class="header">
+      <h1>🚌 BusFleet Booking</h1>
+      <p>Fast & Secure Payment</p>
+    </div>
 
-    <form class="booking-form">
-      <section class="seat-summary">
-        <h2>Seat Summary</h2>
-        <p><strong>Selected Seat:</strong> 5A</p>
-        <p><strong>Fare:</strong> ₹550</p>
-      </section>
+    
 
-      <div class="payment-box">
-        <button type="submit" class="gpay-button">
-          <img src="https://www.gstatic.com/instantbuy/svg/dark_gpay.svg" alt="Google Pay" />
-          Pay ₹550
-        </button>
-        <p class="note">You will be redirected to Google Pay to complete payment.</p>
-      </div>
-    </form>
+    <button class="gpay-button" onclick="alert('Google Pay payment initiated!')">
+      <img src="https://www.gstatic.com/instantbuy/svg/dark_gpay.svg" alt="Google Pay">
+      
+    </button>
 
-    <footer class="footer">
-      <p>&copy; 2025 BusFleet Management</p>
-    </footer>
+    <p class="note">You will be redirected to Google Pay to complete your booking.</p>
+
+    <div class="footer">
+      &copy; 2025 BusFleet Management. All rights reserved.
+    </div>
   </div>
+
 </body>
 </html>
-
-<style>
-:root {
-  --primary: #005a9c;
-  --accent: #28a745;
-  --bg: #f4f8fc;
-  --card: #ffffff;
-  --text: #333;
-  --border: #ddd;
-  --radius: 10px;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  padding: 20px;
-}
-
-.container {
-  max-width: 600px;
-  margin: auto;
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.header {
-  background-color: var(--primary);
-  color: white;
-  text-align: center;
-  padding: 24px 16px;
-}
-
-.header h1 {
-  font-size: 26px;
-}
-
-.booking-form {
-  padding: 24px;
-}
-
-.booking-form section {
-  margin-bottom: 24px;
-}
-
-h2 {
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: var(--primary);
-}
-
-.gpay-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  background-color: black;
-  padding: 14px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  color: white;
-  font-size: 18px;
-  transition: background 0.3s ease;
-}
-
-.gpay-button img {
-  height: 24px;
-}
-
-.gpay-button:hover {
-  background-color: #222;
-}
-
-.note {
-  font-size: 13px;
-  text-align: center;
-  margin-top: 8px;
-  color: #555;
-}
-
-.footer {
-  background-color: #f1f1f1;
-  text-align: center;
-  font-size: 14px;
-  padding: 16px;
-  border-top: 1px solid var(--border);
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 22px;
-  }
-}
-</style>

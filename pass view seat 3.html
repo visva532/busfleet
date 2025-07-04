@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Single Seat Booking | BusFleet</title>
+  <title>Bus Seat Booking | Single Seat Available</title>
   <style>
     :root {
       --primary: #005a9c;
       --accent: #28a745;
       --warning: #ffc107;
-      --gray: #ccc;
+      --booked: #ccc;
       --bg: #f7f9fc;
       --card: #ffffff;
       --text: #333;
+      --border: #ddd;
     }
 
     * {
@@ -23,12 +24,12 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
+      background-color: var(--bg);
       color: var(--text);
       padding: 20px;
     }
 
-    .container {
+    .seat-page {
       max-width: 900px;
       margin: auto;
       background: var(--card);
@@ -37,38 +38,50 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     }
 
-    h2, h3 {
+    .bus-details h2 {
+      color: var(--primary);
+    }
+
+    .rating {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .seat-layout h3 {
+      margin-bottom: 10px;
       color: var(--primary);
     }
 
     .seats-grid {
       display: grid;
-      grid-template-columns: repeat(5, 60px);
-      gap: 15px;
-      margin: 20px 0;
+      grid-template-columns: repeat(5, 50px);
+      gap: 12px;
+      margin-bottom: 10px;
     }
 
     .seat {
-      width: 60px;
-      height: 60px;
-      border-radius: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
       text-align: center;
-      line-height: 60px;
+      line-height: 50px;
       font-weight: bold;
       cursor: not-allowed;
       color: white;
-      background: var(--gray);
-      transition: background 0.3s ease;
     }
 
-    .seat.available {
+    .booked {
+      background-color: var(--booked);
+    }
+
+    .available {
       background-color: var(--accent);
       cursor: pointer;
     }
 
-    .seat.selected {
+    .selected {
       background-color: var(--warning);
-      color: #000;
+      color: black;
     }
 
     .legend {
@@ -89,20 +102,37 @@
     }
 
     .legend-box.booked {
-      background-color: var(--gray);
+      background-color: var(--booked);
     }
 
     .legend-box.selected {
       background-color: var(--warning);
     }
 
-    .summary {
+    .extra-info {
       margin-top: 30px;
+    }
+
+    .extra-info h3 {
+      margin-top: 20px;
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    .extra-info ul {
+      padding-left: 20px;
+      list-style: none;
+    }
+
+    .extra-info ul li::before {
+      content: "✔️ ";
+      margin-right: 6px;
+    }
+
+    .booking-box {
+      margin-top: 30px;
+      border-top: 1px solid var(--border);
       padding-top: 20px;
-      border-top: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
 
     .book-btn {
@@ -112,6 +142,7 @@
       font-size: 16px;
       border: none;
       border-radius: 8px;
+      margin-top: 10px;
       cursor: pointer;
     }
 
@@ -128,48 +159,86 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Bus #TN07AB4567 (AC)</h2>
-    <p>⭐ 4.6 (254 reviews)</p>
-
-    <h3>Select One Seat</h3>
-    <div class="seats-grid">
-      <div class="seat booked">1</div>
-      <div class="seat booked">2</div>
-      <div class="seat booked">3</div>
-      <div class="seat available">4</div>
-      <div class="seat available">5</div>
-      <div class="seat booked">6</div>
-      <div class="seat available">7</div>
-      <div class="seat booked">8</div>
+  <section class="seat-page">
+    <div class="bus-details">
+      <h2>Bus #TN07AB4567 (AC)</h2>
+      <p class="rating">⭐ 4.6 (254 reviews)</p>
     </div>
 
-    <p class="legend">
-      <span class="legend-box available"></span> Available &nbsp;&nbsp;
-      <span class="legend-box booked"></span> Booked &nbsp;&nbsp;
-      <span class="legend-box selected"></span> Selected
-    </p>
-
-    <div class="summary">
-      <p><strong>Selected Seat:</strong> <span id="selected-seat">None</span></p>
-      <button class="book-btn">Book Now</button>
+    <div class="seat-layout">
+      <h3>Select Your Seat</h3>
+      <div class="seats-grid">
+        <!-- 15 total seats: only seat 5 is available -->
+        <div class="seat booked">1</div>
+        <div class="seat booked">2</div>
+        <div class="seat booked">3</div>
+        <div class="seat booked">4</div>
+        <div class="seat available">5</div>
+        <div class="seat booked">6</div>
+        <div class="seat booked">7</div>
+        <div class="seat booked">8</div>
+        <div class="seat booked">9</div>
+        <div class="seat booked">10</div>
+        <div class="seat booked">11</div>
+        <div class="seat booked">12</div>
+        <div class="seat booked">13</div>
+        <div class="seat booked">14</div>
+        <div class="seat booked">15</div>
+      </div>
+      <p class="legend">
+        <span class="legend-box available"></span> Available &nbsp;&nbsp;
+        <span class="legend-box booked"></span> Booked &nbsp;&nbsp;
+        <span class="legend-box selected"></span> Selected
+      </p>
     </div>
-  </div>
+
+    <div class="extra-info">
+      <h3>Boarding & Dropping</h3>
+      <p><strong>Boarding:</strong> Chennai Central Bus Stand (8:00 AM)</p>
+      <p><strong>Dropping:</strong> Coimbatore Main Junction (2:30 PM)</p>
+
+      <h3>Amenities</h3>
+      <ul>
+        <li>🛏️ Sleeper</li>
+        <li>❄️ Air Conditioning</li>
+        <li>🔌 Charging Ports</li>
+        <li>📶 WiFi</li>
+        <li>📺 Entertainment</li>
+      </ul>
+
+      <h3>Booking Policy</h3>
+      <p>Free cancellation up to 1 hour before departure. No refund afterward. ID proof required during boarding.</p>
+
+      <h3>Passenger Ratings & Reviews</h3>
+      <p>“Very clean and on-time bus.” – ⭐⭐⭐⭐⭐</p>
+      <p>“Comfortable and safe journey.” – ⭐⭐⭐⭐</p>
+    </div>
+
+    <div class="booking-box">
+      <p><strong>Seats Selected:</strong> <span id="selected-seats">0</span></p>
+      <p><strong>Total Price:</strong> ₹<span id="total-price">0</span></p>
+      <button class="book-btn">Book Selected Seat</button>
+    </div>
+  </section>
 
   <script>
-    const seats = document.querySelectorAll('.seat.available');
-    const selectedSeatText = document.getElementById('selected-seat');
+    const seatElements = document.querySelectorAll('.seat.available');
+    const selectedSeatsDisplay = document.getElementById('selected-seats');
+    const totalPriceDisplay = document.getElementById('total-price');
+    const seatPrice = 550;
 
-    seats.forEach(seat => {
+    seatElements.forEach(seat => {
       seat.addEventListener('click', () => {
-        // Deselect all seats first
-        seats.forEach(s => s.classList.remove('selected'));
-
-        // Select the clicked seat
-        seat.classList.add('selected');
-        selectedSeatText.textContent = seat.textContent;
+        seat.classList.toggle('selected');
+        updateSummary();
       });
     });
+
+    function updateSummary() {
+      const selectedCount = document.querySelectorAll('.seat.selected').length;
+      selectedSeatsDisplay.textContent = selectedCount;
+      totalPriceDisplay.textContent = selectedCount * seatPrice;
+    }
   </script>
 </body>
 </html>

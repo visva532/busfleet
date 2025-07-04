@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ticket Confirmation | BusFleet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0d47a1;
+      --accent: #4caf50;
+      --bg: #f3f6fa;
+      --card: #ffffff;
+      --text: #333;
+      --border: #e0e0e0;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      color: var(--primary);
+    }
+
+    .success {
+      color: var(--accent);
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .details p {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+
+    .details strong {
+      color: #444;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>🎉 Ticket Confirmed</h1>
+      <p class="success">Thank you! Your booking is successful.</p>
+    </div>
+
+    <div class="section details">
+      <h2>Passenger & Seat Info</h2>
+      <p><strong>Name:</strong> Ramesh Kumar</p>
+      <p><strong>Seat No:</strong> 7A</p>
+      <p><strong>Booking ID:</strong> #BF123456789</p>
+      <p><strong>Travel Date:</strong> 10 July 2025</p>
+      <p><strong>Departure Time:</strong> 08:00 AM</p>
+    </div>
+
+    <div class="section details">
+      <h2>Route Details</h2>
+      <p><strong>From:</strong> Chennai Central</p>
+      <p><strong>To:</strong> Coimbatore junction</p>
+      <p><strong>Boarding Point:</strong> Chennai Central Terminal</p>
+      <p><strong>Dropping Point:</strong> Coimbatore Junction</p>
+    </div>
+
+    <div class="section details">
+      <h2>Bus Info</h2>
+      <p><strong>Operator:</strong> SRM Travels</p>
+      <p><strong>Bus No:</strong> TN07AB4567</p>
+      <p><strong>Bus Type:</strong> AC Sleeper</p>
+    </div>
+
+    <div class="section details">
+      <h2>Fare Summary</h2>
+      <p><strong>Total Fare:</strong> ₹550</p>
+      <p><strong>Payment Mode:</strong> Google Pay</p>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 BusFleet Management. Safe travels! 🚍
+    </div>
+  </div>
+
+</body>
+</html>

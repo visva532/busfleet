@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passenger UPI Payment | BusFleet</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Passenger Payment</h1>
+
+    <form class="payment-form">
+      <div class="form-group">
+        <label for="passengerName">Passenger Name</label>
+        <input type="text" id="passengerName" placeholder="Enter passenger name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="seatNumber">Seat Number</label>
+        <input type="text" id="seatNumber" placeholder="e.g. A1, B2" required />
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Amount (₹)</label>
+        <input type="number" id="amount" placeholder="Enter amount" required />
+      </div>
+
+      <div class="form-group">
+        <label for="upiId">Passenger UPI ID</label>
+        <input type="text" id="upiId" placeholder="e.g. name@upi" required />
+      </div>
+
+      <div class="qr-section">
+        <p>Scan this QR or use UPI ID above</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/QR_Code_Example.svg" alt="UPI QR Code" />
+      </div>
+
+      <button type="submit">Confirm Payment</button>
+    </form>
+  </div>
+</body>
+</html>
+<style>
+    :root {
+  --primary-color: #007bff;
+  --background: #f4f4f4;
+  --text-color: #333;
+  --form-bg: #ffffff;
+  --button-bg: #28a745;
+  --button-text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+.payment-container {
+  max-width: 500px;
+  margin: auto;
+  background: var(--form-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+.payment-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.payment-form .form-group {
+  margin-bottom: 15px;
+}
+
+.payment-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.payment-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.qr-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.qr-section img {
+  max-width: 200px;
+  width: 100%;
+}
+
+.payment-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.payment-form button:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .payment-container {
+    padding: 15px;
+  }
+
+  .qr-section img {
+    max-width: 150px;
+  }
+}
+
+</style>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Bus GPS Tracking</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+      flex-direction: row;
+    }
+
+    #sidebar {
+      width: 300px;
+      background-color: #f1f1f1;
+      padding: 15px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+    }
+
+    .bus-card {
+      background-color: white;
+      border-left: 5px solid #0d47a1;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .bus-card h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #0d47a1;
+    }
+
+    .bus-card p {
+      margin: 6px 0;
+      font-size: 0.9rem;
+    }
+
+    #map {
+      flex: 1;
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      #sidebar {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #map {
+        height: calc(100vh - 200px - 60px); /* 200 sidebar + 60 header */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Admin Panel - Bus Fleet GPS Tracking</header>
+
+  <main>
+    <!-- Sidebar with bus info -->
+    <div id="sidebar">
+      <div class="bus-card">
+        <h3>Bus #101</h3>
+        <p>Status: ✅ On Route</p>
+        <p>Location: 40.7128, -74.0060</p>
+      </div>
+      <div class="bus-card">
+        <h3>Bus #202</h3>
+        <p>Status: ⏱️ Delayed</p>
+        <p>Location: 34.0522, -118.2437</p>
+      </div>
+      <div class="bus-card">
+        <h3>Bus #303</h3>
+        <p>Status: ✅ On Time</p>
+        <p>Location: 41.8781, -87.6298</p>
+      </div>
+    </div>
+
+    <!-- Map area -->
+    <div id="map"></div>
+  </main>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize map
+    const map = L.map('map').setView([39.5, -98.35], 4); // Centered in US
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Bus locations
+    const buses = [
+      {
+        id: 'Bus #101',
+        lat: 40.7128,
+        lon: -74.0060,
+        status: 'On Route'
+      },
+      {
+        id: 'Bus #202',
+        lat: 34.0522,
+        lon: -118.2437,
+        status: 'Delayed'
+      },
+      {
+        id: 'Bus #303',
+        lat: 41.8781,
+        lon: -87.6298,
+        status: 'On Time'
+      }
+    ];
+
+    // Add markers
+    buses.forEach(bus => {
+      const marker = L.marker([bus.lat, bus.lon]).addTo(map);
+      marker.bindPopup(`<strong>${bus.id}</strong><br>Status: ${bus.status}`);
+    });
+  </script>
+</body>
+</html>

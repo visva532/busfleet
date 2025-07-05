@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin settings | BusFleet Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #004080;
+      --accent-color: #007acc;
+      --bg-color: #f4f6f8;
+      --text-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      padding: 20px;
+    }
+
+    .settings-container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .settings-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .settings-header h2 {
+      color: var(--primary-color);
+      font-size: 24px;
+    }
+
+    .settings-option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background-color: var(--accent-color);
+      color: white;
+      padding: 15px 20px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .settings-option:hover {
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 600px) {
+      .settings-container {
+        padding: 20px;
+      }
+
+      .settings-option {
+        font-size: 15px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="settings-container">
+    <div class="settings-header">
+      <h2>Admin settings </h2>
+    </div>
+    <button class="settings-option" onclick="location.href='pw and security.html'">🔒 Password & Security</button>
+    <button class="settings-option" onclick="location.href='aboutus.html'">ℹ️ About Us</button>
+    <button class="settings-option" onclick="logout()">🚪 Logout</button>
+  </div>
+
+  <script>
+    function logout() {
+      // Add actual logout logic here
+      alert("You have been logged out.");
+      location.href = "admin login page.html"; // Redirect to login page
+    }
+  </script>
+</body>
+</html>

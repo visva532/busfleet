@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bus Fleet Notifications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      padding: 1.5rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #007bff;
+    }
+
+    .notification {
+      background-color: white;
+      border-left: 5px solid #007bff;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .notification:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    .fuel { color: #dc3545; }
+    .seat { color: #28a745; }
+    .money { color: #ffc107; }
+
+    .text {
+      flex: 1;
+    }
+
+    .text p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .timestamp {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.3rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      .notification {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .icon {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Notifications</h1>
+
+    <!-- Fuel Alert -->
+    <div class="notification">
+      <div class="icon fuel">⛽</div>
+      <div class="text">
+        <p><strong>Fuel Alert:</strong> Bus 101 fuel level is below 25%.</p>
+        <div class="timestamp">Just now</div>
+      </div>
+    </div>
+
+    <!-- Seat Booked -->
+    <div class="notification">
+      <div class="icon seat">🎫</div>
+      <div class="text">
+        <p><strong>Seat Booked:</strong> Passenger seat confirmed on Bus 202 (3:30 PM).</p>
+        <div class="timestamp">5 minutes ago</div>
+      </div>
+    </div>
+
+    <!-- Money Credited -->
+    <div class="notification">
+      <div class="icon money">💰</div>
+      <div class="text">
+        <p><strong>Payment Received:</strong> ₹450 credited for ticket ID #TX2024.</p>
+        <div class="timestamp">10 minutes ago</div>
+      </div>
+    </div>
+
+    <!-- Add more notifications here if needed -->
+  </div>
+
+</body>
+</html>

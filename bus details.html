@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Seat Details - Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Seat Details</h1>
+
+        <div class="bus-cards">
+            <!-- Bus 1 -->
+            <div class="bus-card">
+                <h2>Bus Number: #101</h2>
+                <ul class="details">
+                    <li><strong>Total Seats:</strong> 45</li>
+                    <li><strong>Empty Seats Today:</strong> 12</li>
+                    <li><strong>Price per Seat Today:</strong> $15</li>
+                    <li><strong>Staff Assigned:</strong> John Smith (Driver), Emily Lee (Conductor)</li>
+                    <li><strong>Fuel Available:</strong> 75% (30 liters)</li>
+                </ul>
+            </div>
+
+            <!-- Bus 2 -->
+            <div class="bus-card">
+                <h2>Bus Number: #102</h2>
+                <ul class="details">
+                    <li><strong>Total Seats:</strong> 50</li>
+                    <li><strong>Empty Seats Today:</strong> 20</li>
+                    <li><strong>Price per Seat Today:</strong> $18</li>
+                    <li><strong>Staff Assigned:</strong> James Brown (Driver), Lisa Green (Conductor)</li>
+                    <li><strong>Fuel Available:</strong> 60% (35 liters)</li>
+                </ul>
+            </div>
+
+            <!-- Bus 3 -->
+            <div class="bus-card">
+                <h2>Bus Number: #103</h2>
+                <ul class="details">
+                    <li><strong>Total Seats:</strong> 40</li>
+                    <li><strong>Empty Seats Today:</strong> 5</li>
+                    <li><strong>Price per Seat Today:</strong> $12</li>
+                    <li><strong>Staff Assigned:</strong> Sarah Johnson (Driver), Tom Black (Conductor)</li>
+                    <li><strong>Fuel Available:</strong> 50% (25 liters)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2e8b57;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.bus-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.bus-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bus-card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.details {
+    list-style-type: none;
+}
+
+.details li {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+strong {
+    color: #2c3e50;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .bus-card h2 {
+        font-size: 20px;
+    }
+
+    .details li {
+        font-size: 14px;
+    }
+}
+
+</style>

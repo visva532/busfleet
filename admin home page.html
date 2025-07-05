@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Home - Bus Fleet Management</title>
+  <link rel="stylesheet" href="admin_home.css" />
+  <style>
+    /* Reset & Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffdd00;
+    }
+
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-toggle-label {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle-label {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        background-color: #0056b3;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+      }
+
+      .nav-toggle:checked + .nav-toggle-label + .nav-links {
+        display: flex;
+      }
+    }
+
+    /* Notification Bar - RIGHT aligned */
+    .notification-bar {
+      background-color: #e9f5ff;
+      padding: 0.8rem 2rem;
+      border-bottom: 1px solid #cde4f7;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .notification-icon {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .notification-icon svg {
+      display: block;
+    }
+
+    .badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background-color: red;
+      color: white;
+      font-size: 0.75rem;
+      padding: 2px 6px;
+      border-radius: 50%;
+    }
+
+    .notification-text {
+      font-size: 1rem;
+      color: #0056b3;
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h2 {
+      color: #0056b3;
+      margin-bottom: 1rem;
+    }
+
+    .cards {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-left: 5px solid #007bff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      flex: 1 1 30%;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f1f1f1;
+    }
+
+    .route-list {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .route-list li {
+      margin: 0.5rem 0;
+      background-color: #e9f5ff;
+      padding: 10px;
+      border-left: 4px solid #007bff;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .footer-links {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-logo">BusFleet Admin</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="dash board.html">Dashboard</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="bus details.html">Bus Details</a></li>
+      <li><a href="staff details.html">Staff Details</a></li>
+      <li><a href="bus loction gps.html">GPS</a></li>
+      <li><a href="admin settings.html">Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- NOTIFICATION BAR (Right side under navbar) -->
+ <a href="admin notification.html"> <div class="notification-bar">
+    <div class="notification-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24" width="28" fill="#333">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 22c1.1 0 1.99-.9 1.99-2h-4A2 2 0 0 0 12 22zm6-6v-5c0-2.97-2.16-5.43-5-5.91V4a1 1 0 0 0-2 0v1.09C8.16 5.57 6 8.03 6 11v5l-2 2v1h16v-1l-2-2z"/>
+      </svg>
+      <span class="badge">3</span>
+    </div>
+    <span class="notification-text">You have 3 new notifications</span>
+  </div></a>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- FUEL DETAILS -->
+    <section class="section">
+      <h2>Bus Fuel Details</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Bus 101</h3>
+          <p>Fuel Level: 70%</p>
+          <p>Last Refill: 2 days ago</p>
+        </div>
+        <div class="card">
+          <h3>Bus 202</h3>
+          <p>Fuel Level: 50%</p>
+          <p>Last Refill: Yesterday</p>
+        </div>
+        <div class="card">
+          <h3>Bus 303</h3>
+          <p>Fuel Level: 85%</p>
+          <p>Last Refill: 3 days ago</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODAY'S RUNNING SHIFTS -->
+    <section class="section">
+      <h2>Today's Bus Running Shifts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Bus Number</th>
+            <th>Driver</th>
+            <th>Shift</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bus 101</td>
+            <td>John D.</td>
+            <td>Morning (6AM - 2PM)</td>
+            <td>Running</td>
+          </tr>
+          <tr>
+            <td>Bus 202</td>
+            <td>Alex P.</td>
+            <td>Afternoon (2PM - 10PM)</td>
+            <td>Scheduled</td>
+          </tr>
+          <tr>
+            <td>Bus 303</td>
+            <td>Mary L.</td>
+            <td>Night (10PM - 6AM)</td>
+            <td>Not Started</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ROUTES -->
+    <section class="section">
+      <h2>Routes of Buses</h2>
+      <ul class="route-list">
+        <li><strong>Bus 101:</strong> City A → City B → City C</li>
+        <li><strong>Bus 202:</strong> City D → City E → City F</li>
+        <li><strong>Bus 303:</strong> City G → City H → City I</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="aboutus.html">About Us</a>
+      <a href="legal policy.html">Legal Policy</a>
+    </div>
+    <p>&copy; 2025 Bus Fleet Management System</p>
+  </footer>
+
+</body>
+</html>

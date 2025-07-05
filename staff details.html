@@ -78,6 +78,28 @@
             color: #4CAF50;
         }
 
+        .salary-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .salary-button:hover {
+            background-color: #45a049;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
         /* Media query for responsiveness */
         @media screen and (max-width: 768px) {
             .container {
@@ -207,7 +229,14 @@
                 <p><span>Address:</span> 404 Pine Rd, Station</p>
             </div>
         </div>
+
+        <!-- Salary Button -->
+        <div class="button-container">
+            <button class="salary-button" onclick="location.href='salary details.html'">View Salary Details</button>
+        </div>
     </div>
+
+    
 
 </body>
 </html>

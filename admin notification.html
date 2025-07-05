@@ -1,195 +1,123 @@
-<section id="notifications">
-  <div class="notification-container">
-    <header class="notification-header">
-      <a href="#" aria-label="Go back">
-        <img src="/page/5d2540a4-1c4a-4048-a67c-6359e6b7940d/images/10_1422.svg" alt="Back arrow" class="back-icon">
-      </a>
-      <h1 class="header-title">Notification</h1>
-    </header>
-    <main class="notification-body">
-      <article class="alert-card">
-        <h2 class="alert-title">Fuel alert !</h2>
-        <div class="fuel-card-content">
-          <p class="fuel-message">The fuel is low ,please refil the fuel in near by bulk such us madurai indian oil,arupukottai indian oil .</p>
-          <div class="fuel-card-footer">
-            <span class="date-text">date : 17/6/25</span>
-            <span class="time-text">10 pm</span>
-          </div>
-        </div>
-      </article>
-      <article class="alert-card">
-        <h2 class="alert-title">Booking alert !</h2>
-        <!--merged image-->
-        <div class="booking-card-content">
-          <img src="/page/5d2540a4-1c4a-4048-a67c-6359e6b7940d/images/10_1415.svg" alt="" class="booking-card-bg">
-          <div class="booking-details">
-            <p>Name : visva</p>
-            <p>seat no :   A34</p>
-            <p>From : madurai ,Aarapalayam</p>
-            <p>To :  Chennai,koyembedu</p>
-            <div class="price-info">
-              <span>Rs : 2000</span>
-              <img src="/page/5d2540a4-1c4a-4048-a67c-6359e6b7940d/images/10_1416.svg" alt="Rupee symbol" class="rupee-icon">
-            </div>
-          </div>
-        </div>
-      </article>
-    </main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bus Fleet Notifications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      padding: 1.5rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #007bff;
+    }
+
+    .notification {
+      background-color: white;
+      border-left: 5px solid #007bff;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .notification:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    .fuel { color: #dc3545; }
+    .seat { color: #28a745; }
+    .money { color: #ffc107; }
+
+    .text {
+      flex: 1;
+    }
+
+    .text p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .timestamp {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.3rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      .notification {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .icon {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Notifications</h1>
+
+    <!-- Fuel Alert -->
+    <div class="notification">
+      <div class="icon fuel">⛽</div>
+      <div class="text">
+        <p><strong>Fuel Alert:</strong> Bus 101 fuel level is below 25%.</p>
+        <div class="timestamp">Just now</div>
+      </div>
+    </div>
+
+    <!-- Seat Booked -->
+    <div class="notification">
+      <div class="icon seat">🎫</div>
+      <div class="text">
+        <p><strong>Seat Booked:</strong> Passenger seat confirmed on Bus 202 (3:30 PM).</p>
+        <div class="timestamp">5 minutes ago</div>
+      </div>
+    </div>
+
+    <!-- Money Credited -->
+    <div class="notification">
+      <div class="icon money">💰</div>
+      <div class="text">
+        <p><strong>Payment Received:</strong> ₹450 credited for ticket ID #TX2024.</p>
+        <div class="timestamp">10 minutes ago</div>
+      </div>
+    </div>
+
+    <!-- Add more notifications here if needed -->
   </div>
-</section>
-<style>
-    :root {
-  --background-color: #a9d4dd;
-  --header-bg-color: #8FB0B8; /* Approximated from image */
-  --card-bg-color: #fffbfb;
-  --footer-bg-color: #fffefe;
-  --text-color: #000000;
-  --header-height: 111px;
-  --footer-height: 63px;
-}
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.page-container {
-  max-width: 412px;
-  margin: 0 auto;
-  position: relative;
-  min-height: 100vh;
-  background-color: var(--background-color);
-  padding-top: var(--header-height);
-  padding-bottom: var(--footer-height);
-}
-
-/* CSS from section:header */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 412px;
-  height: var(--header-height);
-  z-index: 100;
-  color: var(--text-color);
-}
-
-.header-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  /* The SVG has its own rounded corners */
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  padding: 0 33px;
-}
-
-.header-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 1.5; /* 75px */
-  letter-spacing: 2.5px;
-  margin: 0;
-}
-
-.menu-button {
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.menu-button img {
-  width: 41px;
-  height: 33px;
-  display: block;
-}
-
-/* CSS from section:main */
-.bus-list {
-  padding: 28px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.bus-item {
-  padding-left: 13px; /* Aligns with "Admin" text */
-}
-
-.bus-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 1.5; /* 75px */
-  letter-spacing: 2.5px;
-  margin: 0 0 4px 0;
-}
-
-.bus-card {
-  background-color: var(--card-bg-color);
-  border-radius: 5px;
-  padding: 10px 20px;
-  text-align: center;
-}
-
-.bus-route,
-.bus-time {
-  font-family: 'Poppins', sans-serif;
-  font-size: 25px;
-  font-weight: 600;
-  line-height: 1.5; /* 37.5px */
-  letter-spacing: 1.25px;
-  margin: 0;
-}
-
-/* CSS from section:footer */
-.site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 412px;
-  height: var(--footer-height);
-  background-color: var(--footer-bg-color);
-  z-index: 100;
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  padding: 0 10px;
-}
-
-.nav-link img {
-  display: block;
-  height: 42px;
-  width: auto;
-}
-
-.nav-link .settings-icon {
-  border: 2.31px solid #000001;
-  border-radius: 2px; /* To soften the sharp corners of the border */
-  height: 39px;
-}
-</style>
+</body>
+</html>

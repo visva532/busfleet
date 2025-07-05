@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passenger Profile | BusFleet</title>
+  <link rel="stylesheet" href="passenger-profile.css" />
+</head>
+<body>
+  <section class="profile-page">
+    <div class="profile-container">
+      <div class="profile-header">
+        <img src="https://via.placeholder.com/100" alt="Profile Photo" class="profile-img" />
+        <h2>John Doe</h2>
+        <p class="email">johndoe@example.com</p>
+      </div>
+
+      <div class="info-section">
+        <h3>Passenger Info</h3>
+        <ul>
+          <li><strong>Phone:</strong> +91 9876543210</li>
+          <li><strong>Address:</strong> 123 Main Street, Chennai</li>
+          <li><strong>Member Since:</strong> Jan 2023</li>
+        </ul>
+      </div>
+
+      <div class="quick-links">
+        <a href="help.html" class="link-item">🆘 Help</a>
+        <a href="about.html" class="link-item">ℹ️ About Us</a>
+        <a href="logout.html" class="link-item logout">🚪 Logout</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<style>
+    :root {
+  --primary-color: #005a9c;
+  --background-color: #f5f7fa;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.profile-container {
+  max-width: 420px;
+  width: 100%;
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.profile-header h2 {
+  font-size: 22px;
+  color: var(--primary-color);
+}
+
+.email {
+  font-size: 14px;
+  color: #666;
+}
+
+.info-section {
+  margin: 20px 0;
+}
+
+.info-section h3 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.info-section ul {
+  list-style: none;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.info-section li {
+  margin-bottom: 8px;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.link-item {
+  display: block;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+}
+
+.link-item:hover {
+  background-color: #00407a;
+}
+
+.logout {
+  background-color: #c0392b;
+}
+
+.logout:hover {
+  background-color: #a93226;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 480px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-header h2 {
+    font-size: 20px;
+  }
+
+  .info-section h3 {
+    font-size: 16px;
+  }
+}
+
+</style>

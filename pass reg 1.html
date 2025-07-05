@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | BusFleet</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <section class="register-section">
+    <div class="register-container">
+      <h1>Create Passenger Account</h1>
+      <p>Register to book and manage your bus trips easily.</p>
+
+      <form class="register-form">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required />
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required />
+
+        <button type="submit"><a href="pass home.html" class="reg">Register</a></button>
+      </form>
+
+      <div class="footer-links">
+        <p>Already have an account? <a href="login.html"><a href="pass login.html">Login here</a></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<style>
+    :root {
+  --primary-color: #005a9c;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --input-bg: #ffffff;
+  --border-color: #ccc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.register-section {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+.register-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.register-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+}
+
+.register-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #00457c;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 480px) {
+  .register-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+.reg{
+  text-decoration: none;
+  color: white;
+}
+
+</style>

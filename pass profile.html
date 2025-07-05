@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passenger Profile | BusFleet</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <section class="profile-section">
+    <div class="profile-container">
+      <div class="profile-header">
+        <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic" />
+        <h2 class="profile-name">John Doe</h2>
+        <p class="profile-email">johndoe@example.com</p>
+      </div>
+
+      <form class="profile-form">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" value="John Doe" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="johndoe@example.com" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" value="+91 9876543210" required />
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter address">123 Main Street, Cityname</textarea>
+
+        <button type="submit"> <a href="pass home.html" class="hi">Update Profile</a></button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
+<style>
+    :root {
+  --primary-color: #005a9c;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --input-bg: #ffffff;
+  --border-color: #ccc;
+  --profile-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-section {
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+.profile-container {
+  background-color: var(--profile-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.profile-header {
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 20px;
+  margin: 5px 0;
+  color: var(--primary-color);
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #666;
+}
+
+.profile-form {
+  text-align: left;
+}
+
+.profile-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  font-size: 14px;
+}
+
+.profile-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-form button:hover {
+  background-color: #00457c;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-name {
+    font-size: 18px;
+  }
+}
+.hi{
+  text-decoration: none;
+  color: white;
+}
+
+</style>

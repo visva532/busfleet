@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driver Home | Bus Fleet Management</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #003366;
+    }
+
+    .dashboard-buttons {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .dashboard-buttons a {
+      padding: 10px 20px;
+      background-color: #0055a5;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .dashboard-buttons a:hover {
+      background-color: #003f7d;
+    }
+
+    .info-section {
+      margin-top: 20px;
+    }
+
+    .info-section h3 {
+      margin-bottom: 10px;
+      color: #0055a5;
+    }
+
+    .fuel-bar {
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 20px;
+      width: 100%;
+    }
+
+    .fuel-fill {
+      height: 100%;
+      background-color: #28a745;
+      width: 72%; /* change this based on fuel level */
+      color: white;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .dashboard-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">BusFleetPro</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="driver my trip.html">My Trips</a>
+      <a href="driverscedule.html">Schedule</a>
+      <a href="driver setting.html">Settings</a>
+      <a href="driverlogin.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Welcome -->
+    <div class="card">
+      <h2>Welcome, Driver John!</h2>
+      <p>You are logged in to the Bus Fleet Management System. Use the options below to manage your schedule and trips.</p>
+
+      <div class="dashboard-buttons">
+        <a href="driver viewassigned page.html">View Assigned Buses</a>
+        <a href="driver todys .html">Today's Route</a>
+        <a href="driver trip history.html">Trip History</a>
+        <a href="driver profile.html">Profile Settings</a>
+      </div>
+    </div>
+
+    <!-- Fuel Info -->
+    <div class="card">
+      <h2>Current Bus Fuel Status</h2>
+      <p><strong>Bus Number:</strong> TN07GH1122</p>
+      <p><strong>Fuel Available:</strong> 72%</p>
+      <div class="fuel-bar">
+        <div class="fuel-fill">72%</div>
+      </div>
+    </div>
+
+    <!-- Shift & Route Info -->
+    <div class="card">
+      <h2>Driving Shifts & Routes</h2>
+
+      <!-- Today's Shift -->
+      <div class="info-section">
+        <h3>Today (July 3, 2025)</h3>
+        <p><strong>Shift Time:</strong> 6:00 AM – 12:00 PM</p>
+        <p><strong>Route:</strong> Chennai → Trichy</p>
+        <p><strong>Stops:</strong></p>
+        <ul>
+          <li>Chennai Central</li>
+          <li>Villupuram</li>
+          <li>Perambalur</li>
+          <li>Trichy Main Bus Stand</li>
+        </ul>
+      </div>
+
+      <!-- Tomorrow's Shift -->
+      <div class="info-section">
+        <h3>Tomorrow (July 4, 2025)</h3>
+        <p><strong>Shift Time:</strong> 2:00 PM – 8:00 PM</p>
+        <p><strong>Route:</strong> Trichy → Salem</p>
+        <p><strong>Stops:</strong></p>
+        <ul>
+          <li>Trichy</li>
+          <li>Namakkal</li>
+          <li>Salem Old Bus Stand</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 BusFleetPro. All rights reserved.
+  </footer>
+</body>
+</html>

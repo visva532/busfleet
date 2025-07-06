@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driver Profile Settings</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 25px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #003366;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #0055a5;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #003f7d;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Driver Profile Settings</h2>
+
+    <form>
+      <div class="form-group">
+        <label for="driverName">Full Name</label>
+        <input type="text" id="driverName" name="driverName" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="driverEmail">Email Address</label>
+        <input type="email" id="driverEmail" name="driverEmail" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="licenseNumber">License Number</label>
+        <input type="text" id="licenseNumber" name="licenseNumber" placeholder="e.g. TN-45-123456" required>
+      </div>
+
+      <div class="form-group">
+        <label for="licenseExpiry">License Expiry Date</label>
+        <input type="date" id="licenseExpiry" name="licenseExpiry" required>
+      </div>
+
+      <div class="form-group">
+        <label for="accidentHistory">Accident History</label>
+        <textarea id="accidentHistory" name="accidentHistory" placeholder="List any past accidents, with dates and description..."></textarea>
+      </div>
+
+      <button type="submit">Save Profile</button>
+    </form>
+  </div>
+
+</body>
+</html>

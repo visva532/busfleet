@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passenger Login - BusFleet Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #2980b9, #6dd5fa);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login-container .forgot-password {
+      text-align: right;
+      margin-top: -10px;
+      margin-bottom: 15px;
+    }
+
+    .login-container .forgot-password a {
+      font-size: 14px;
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .login-container .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    .login-container input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .login-container .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background-color: #2980b9;
+    }
+
+    .login-container .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .login-container {
+        padding: 20px;
+      }
+
+    }
+     .modify{
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Driver Login</h2>
+    <form action="#" method="POST">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <div class="forgot-password">
+        <a href="driver forget email.html">Forgot Password?</a>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="remember" name="remember" />
+        <label for="remember">Remember me</label>
+      </div>
+
+      <a href="driver home page .html"><button type="submit"><a href="driver home page .html" class="modify"> Login</a></button></a>
+    </form>
+    <div class="footer">
+      <p>Don't have an account? <a href="driver register.html">Sign up</a></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bus Seat Booking | Single Seat Available</title>
+  <style>
+    :root {
+      --primary: #005a9c;
+      --accent: #28a745;
+      --warning: #ffc107;
+      --booked: #ccc;
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #333;
+      --border: #ddd;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    .seat-page {
+      max-width: 900px;
+      margin: auto;
+      background: var(--card);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .bus-details h2 {
+      color: var(--primary);
+    }
+
+    .rating {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .seat-layout h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .seats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 50px);
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .seat {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      cursor: not-allowed;
+      color: white;
+    }
+
+    .booked {
+      background-color: var(--booked);
+    }
+
+    .available {
+      background-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .selected {
+      background-color: var(--warning);
+      color: black;
+    }
+
+    .legend {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .legend-box {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      margin-right: 6px;
+      border-radius: 4px;
+    }
+
+    .legend-box.available {
+      background-color: var(--accent);
+    }
+
+    .legend-box.booked {
+      background-color: var(--booked);
+    }
+
+    .legend-box.selected {
+      background-color: var(--warning);
+    }
+
+    .extra-info {
+      margin-top: 30px;
+    }
+
+    .extra-info h3 {
+      margin-top: 20px;
+      color: var(--primary);
+      font-size: 18px;
+    }
+
+    .extra-info ul {
+      padding-left: 20px;
+      list-style: none;
+    }
+
+    .extra-info ul li::before {
+      content: "✔️ ";
+      margin-right: 6px;
+    }
+
+    .booking-box {
+      margin-top: 30px;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .book-btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .book-btn:hover {
+      background-color: #00457c;
+    }
+
+    @media screen and (max-width: 600px) {
+      .seats-grid {
+        grid-template-columns: repeat(3, 50px);
+        justify-content: center;
+      }
+    }
+    .we{
+  text-decoration: none;
+  color: white;
+}
+  </style>
+</head>
+<body>
+  <section class="seat-page">
+    <div class="bus-details">
+      <h2>Bus #TN07AB4567 (AC)</h2>
+      <p class="rating">⭐ 4.6 (254 reviews)</p>
+    </div>
+
+    <div class="seat-layout">
+      <h3>Select Your Seat</h3>
+      <div class="seats-grid">
+        <!-- 15 total seats: only seat 5 is available -->
+        <div class="seat booked">1</div>
+        <div class="seat booked">2</div>
+        <div class="seat booked">3</div>
+        <div class="seat booked">4</div>
+        <div class="seat available">5</div>
+        <div class="seat booked">6</div>
+        <div class="seat booked">7</div>
+        <div class="seat booked">8</div>
+        <div class="seat booked">9</div>
+        <div class="seat booked">10</div>
+        <div class="seat booked">11</div>
+        <div class="seat booked">12</div>
+        <div class="seat booked">13</div>
+        <div class="seat booked">14</div>
+        <div class="seat booked">15</div>
+      </div>
+      <p class="legend">
+        <span class="legend-box available"></span> Available &nbsp;&nbsp;
+        <span class="legend-box booked"></span> Booked &nbsp;&nbsp;
+        <span class="legend-box selected"></span> Selected
+      </p>
+    </div>
+
+    <div class="extra-info">
+      <h3>Boarding & Dropping</h3>
+      <p><strong>Boarding:</strong> Chennai Central Bus Stand (8:00 AM)</p>
+      <p><strong>Dropping:</strong> Coimbatore Main Junction (2:30 PM)</p>
+
+      <h3>Amenities</h3>
+      <ul>
+        <li>🛏️ Sleeper</li>
+        <li>❄️ Air Conditioning</li>
+        <li>🔌 Charging Ports</li>
+        <li>📶 WiFi</li>
+        <li>📺 Entertainment</li>
+      </ul>
+
+      <h3>Booking Policy</h3>
+      <p>Free cancellation up to 1 hour before departure. No refund afterward. ID proof required during boarding.</p>
+
+      <h3>Passenger Ratings & Reviews</h3>
+      <p>“Very clean and on-time bus.” – ⭐⭐⭐⭐⭐</p>
+      <p>“Comfortable and safe journey.” – ⭐⭐⭐⭐</p>
+    </div>
+
+    <div class="booking-box">
+      <p><strong>Seats Selected:</strong> <span id="selected-seats">0</span></p>
+      <p><strong>Total Price:</strong> ₹<span id="total-price">0</span></p>
+      <button class="book-btn"><a href="pass ticbooking 1pasdetails.html" class="we">Book Selected Seat</a></button>
+    </div>
+  </section>
+
+  <script>
+    const seatElements = document.querySelectorAll('.seat.available');
+    const selectedSeatsDisplay = document.getElementById('selected-seats');
+    const totalPriceDisplay = document.getElementById('total-price');
+    const seatPrice = 550;
+
+    seatElements.forEach(seat => {
+      seat.addEventListener('click', () => {
+        seat.classList.toggle('selected');
+        updateSummary();
+      });
+    });
+
+    function updateSummary() {
+      const selectedCount = document.querySelectorAll('.seat.selected').length;
+      selectedSeatsDisplay.textContent = selectedCount;
+      totalPriceDisplay.textContent = selectedCount * seatPrice;
+    }
+  </script>
+</body>
+</html>

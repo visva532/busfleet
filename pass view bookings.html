@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Bookings - BusFleet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table thead {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    
+
+    .status {
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      color: white;
+      display: inline-block;
+    }
+
+    .confirmed {
+      background-color: #27ae60;
+    }
+
+    .cancelled {
+      background-color: #e74c3c;
+    }
+
+    @media screen and (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+        color: #555;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>My Bookings</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Booking ID</th>
+          <th>Route</th>
+          <th>Date</th>
+          <th>Bus Type</th>
+          <th>Seats</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Booking ID">BF12345</td>
+          <td data-label="Route">Delhi → Jaipur</td>
+          <td data-label="Date">2025-07-10</td>
+          <td data-label="Bus Type">AC Sleeper</td>
+          <td data-label="Seats">2</td>
+          <td data-label="Status"><span class="status confirmed">Confirmed</span></td>
+        </tr>
+        <tr>
+          <td data-label="Booking ID">BF12346</td>
+          <td data-label="Route">Mumbai → Pune</td>
+          <td data-label="Date">2025-07-12</td>
+          <td data-label="Bus Type">Non-AC Seater</td>
+          <td data-label="Seats">1</td>
+          <td data-label="Status"><span class="status cancelled">Cancelled</span></td>
+        </tr>
+        <!-- Add more rows dynamically from backend if needed -->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

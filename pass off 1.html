@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ICICI Offer | BusFleet</title>
+  <link rel="stylesheet" href="icici-offer.css" />
+</head>
+<body>
+  <section class="offer-section">
+    <div class="offer-container">
+      <div class="offer-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/ICICI_Bank_Logo.svg" alt="ICICI Bank Logo" class="icici-logo" />
+        <h1>Get up to ₹500 Cashback!</h1>
+        <p class="offer-description">Pay using ICICI Bank Debit or Credit Card and get exciting cashback on your first bus booking.</p>
+      </div>
+
+      <div class="terms-box">
+        <h2>Terms & Conditions</h2>
+        <ul>
+          <li>Offer valid only for ICICI Bank cardholders.</li>
+          <li>Minimum transaction value should be ₹300.</li>
+          <li>Maximum cashback of ₹500 per user.</li>
+          <li>Cashback will be credited within 7 working days.</li>
+          <li>Offer valid until <strong>31st August 2025</strong>.</li>
+          <li>This offer cannot be combined with other promotional offers.</li>
+          <li>BusFleet reserves the right to modify or withdraw the offer at any time.</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <a href="book-now.html" class="cta-button">Book Now</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<style>
+    :root {
+  --primary-color: #e84e0f;
+  --background-color: #fefefe;
+  --text-color: #333;
+  --card-bg: #fff9f5;
+  --border-color: #e2e2e2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.offer-section {
+  width: 100%;
+  max-width: 600px;
+}
+
+.offer-container {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.icici-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.offer-header h1 {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.offer-description {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.terms-box {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.terms-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.terms-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.terms-box li {
+  margin-bottom: 8px;
+}
+
+.cta {
+  margin-top: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #c33d07;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .offer-container {
+    padding: 20px;
+  }
+
+  .offer-header h1 {
+    font-size: 18px;
+  }
+
+  .terms-box h2 {
+    font-size: 16px;
+  }
+}
+
+</style>

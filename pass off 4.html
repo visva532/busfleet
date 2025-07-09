@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver | BusFleet Offer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🚌 Passanger Special Offer</h1>
+    </header>
+
+    <section class="offer-banner">
+      <div class="offer-icon">📢</div>
+      <div class="offer-text">
+        <h2>Special Monsoon Offer!</h2>
+        <p>Travel safely and comfortably with <strong>up to 25% off</strong> on all sleeper buses this July! Limited period deal!</p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h3>Passenger Reminders</h3>
+      <ul>
+        <li>Applicable on selected routes and bus operators only.</li>
+        <li>If the ticket is canceled, the discount will not be refunded.</li>
+        <li>Payment must be made via card, UPI, net banking, or wallet</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
+<style>
+    :root {
+  --primary: #007bff;
+  --secondary: #f0f8ff;
+  --highlight: #28a745;
+  --text: #333;
+  --background: #ffffff;
+  --offer-bg: #d4edda;
+  --offer-border: #c3e6cb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--secondary);
+  color: var(--text);
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.offer-banner {
+  background-color: var(--offer-bg);
+  border: 2px solid var(--offer-border);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: slideIn 0.8s ease;
+}
+
+.offer-icon {
+  font-size: 36px;
+  margin-right: 12px;
+}
+
+.offer-text h2 {
+  color: var(--highlight);
+  margin-bottom: 5px;
+}
+
+.offer-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.info-section h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.info-section ul {
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  } to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .offer-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offer-icon {
+    margin: 0 0 10px 0;
+  }
+}
+
+</style>

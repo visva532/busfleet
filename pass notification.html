@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passenger Notifications - Bus Fleet</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      color: #2c3e50;
+      font-size: 24px;
+    }
+
+    .notification-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .notification {
+      background-color: #ffffff;
+      border-left: 6px solid #3498db;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 15px 20px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .notification:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .notification h3 {
+      color: #2c3e50;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .notification p {
+      color: #555;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .notification .time {
+      font-size: 13px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      .notification {
+        padding: 12px 16px;
+      }
+
+      .notification h3 {
+        font-size: 16px;
+      }
+
+      .notification p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚌 Passenger Notifications</h1>
+  </header>
+
+  <div class="notification-container">
+    <div class="notification">
+      <h3>Bus Delay: Route 102</h3>
+      <p>Bus #102 driven by Mr. Rajesh is delayed due to traffic near Koyambedu. Estimated arrival: 9:45 AM.</p>
+      <div class="time">Received: 9:15 AM - July 17, 2025</div>
+    </div>
+
+    <div class="notification">
+      <h3>Route Change: Bus 205</h3>
+      <p>Bus #205 will skip T Nagar due to road closure. Alternate stop: Saidapet.</p>
+      <div class="time">Received: 8:50 AM - July 17, 2025</div>
+    </div>
+
+    <div class="notification">
+      <h3>Cancellation: Bus 401</h3>
+      <p>Bus #401 service has been cancelled for today due to maintenance issues. We apologize for the inconvenience.</p>
+      <div class="time">Received: 7:30 AM - July 17, 2025</div>
+    </div>
+  </div>
+</body>
+</html>
